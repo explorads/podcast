@@ -1,0 +1,15 @@
+plugins {
+    id("com.android.library")
+}
+apply from: "../common.gradle"
+
+android {
+    namespace "com.explorads.podcast.model"
+}
+
+dependencies {
+    annotationProcessor "androidx.annotation:annotation:$annotationVersion"
+    implementation "androidx.media:media:$mediaVersion"
+
+    implementation "org.apache.commons:commons-lang3:$commonslangVersion"
+}

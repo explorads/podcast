@@ -1,0 +1,15 @@
+plugins {
+    id("com.android.library")
+}
+apply from: "../common.gradle"
+
+android {
+    namespace "com.explorads.podcast.event"
+}
+
+dependencies {
+    implementation project(':model')
+    implementation "androidx.core:core:$coreVersion"
+
+    annotationProcessor "androidx.annotation:annotation:$annotationVersion"
+}

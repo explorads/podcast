@@ -1,0 +1,17 @@
+plugins {
+    id("com.android.library")
+}
+apply from: "../../common.gradle"
+
+android {
+    namespace "com.explorads.podcast.ui.pngicons"
+
+    defaultConfig {
+        vectorDrawables.useSupportLibrary false
+        vectorDrawables.generatedDensities = ["xhdpi"]
+    }
+}
+
+dependencies {
+    annotationProcessor "androidx.annotation:annotation:$annotationVersion"
+}
