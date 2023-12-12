@@ -140,6 +140,9 @@ dependencies {
     androidTestImplementation "androidx.test:runner:$runnerVersion"
     androidTestImplementation "androidx.test:rules:$rulesVersion"
     androidTestImplementation 'androidx.test.ext:junit:1.1.1'
+
+    // google ads
+    implementation 'com.google.android.gms:play-services-ads:22.6.0'
 }
 
 if (project.hasProperty("antennaPodPlayPublisherCredentials")) {

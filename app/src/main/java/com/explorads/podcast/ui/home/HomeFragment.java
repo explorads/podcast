@@ -9,13 +9,18 @@ import android.os.Bundle;
 import android.os.Handler;
 import android.os.Looper;
 import android.text.TextUtils;
+import android.util.DisplayMetrics;
 import android.util.Log;
+import android.view.Display;
 import android.view.LayoutInflater;
 import android.view.MenuItem;
 import android.view.View;
 import android.view.ViewGroup;
+import android.view.ViewTreeObserver;
+import android.widget.FrameLayout;
 
 import androidx.annotation.NonNull;
+import androidx.annotation.Nullable;
 import androidx.appcompat.widget.Toolbar;
 import androidx.core.content.ContextCompat;
 import androidx.fragment.app.Fragment;
@@ -47,6 +52,11 @@ import com.explorads.podcast.event.FeedListUpdateEvent;
 import com.explorads.podcast.event.FeedUpdateRunningEvent;
 import com.explorads.podcast.fragment.SearchFragment;
 import com.explorads.podcast.storage.preferences.UserPreferences;
+import com.google.android.gms.ads.AdListener;
+import com.google.android.gms.ads.AdSize;
+import com.google.android.gms.ads.LoadAdError;
+import com.google.android.gms.ads.admanager.AdManagerAdRequest;
+import com.google.android.gms.ads.admanager.AdManagerAdView;
 
 import io.reactivex.Observable;
 import io.reactivex.android.schedulers.AndroidSchedulers;
@@ -67,6 +77,17 @@ public class HomeFragment extends Fragment implements Toolbar.OnMenuItemClickLis
     private boolean displayUpArrow;
     private HomeFragmentBinding viewBinding;
     private Disposable disposable;
+
+//    private AdManagerAdView adManagerAdView;
+
+    private AdManagerAdView adView;
+    private FrameLayout adViewContainer;
+
+    private static final String BANNER_AD_UNIT_ID = "ca-app-pub-3940256099942544/6300978111";
+
+
+
+
 
     @NonNull
     @Override
@@ -89,9 +110,113 @@ public class HomeFragment extends Fragment implements Toolbar.OnMenuItemClickLis
             new Handler(Looper.getMainLooper()).postDelayed(() -> viewBinding.swipeRefresh.setRefreshing(false),
                     getResources().getInteger(R.integer.swipe_to_refresh_duration_in_ms));
         });
-
         return viewBinding.getRoot();
     }
+
+    @Override
+    public void onViewCreated(@NonNull View view, @Nullable Bundle savedInstanceState) {
+        super.onViewCreated(view, savedInstanceState);
+//        adManagerAdView = viewBinding.adManagerAdView;
+        adViewContainer = viewBinding.adViewContainer;
+
+
+        // Since we're loading the banner based on the adContainerView size, we need to wait until this
+        // view is laid out before we can get the width.
+//        adViewContainer
+//                .getViewTreeObserver()
+//                .addOnGlobalLayoutListener(
+//                        this::loadBanner);
+
+
+
+        adViewContainer
+                .getViewTreeObserver()
+                .addOnGlobalLayoutListener(new ViewTreeObserver.OnGlobalLayoutListener() {
+                    @Override
+                    public void onGlobalLayout() {
+                        Log.d(TAG, "onGlobalLayout: success-> adViewContainer height: " + adViewContainer.getHeight() + ", adViewContainer width: " + adViewContainer.getWidth());
+                        loadBanner();
+                        adViewContainer
+                                .getViewTreeObserver()
+                                .removeOnGlobalLayoutListener(this);
+                    }
+                });
+
+
+    }
+
+    private void loadBanner() {
+        adView = new AdManagerAdView(requireContext());
+        adView.setAdUnitId(BANNER_AD_UNIT_ID);
+        adView.setAdSize(getAdSize());
+
+        // Replace ad container with new ad view.
+        adViewContainer.removeAllViews();
+        adViewContainer.addView(adView);
+
+        // Start loading the ad in the background.
+        AdManagerAdRequest adRequest = new AdManagerAdRequest.Builder().build();
+        adView.loadAd(adRequest);
+
+
+        adView.setAdListener(new AdListener() {
+            @Override
+            public void onAdClicked() {
+                // Code to be executed when the user clicks on an ad.
+            }
+
+            @Override
+            public void onAdClosed() {
+                // Code to be executed when the user is about to return
+                // to the app after tapping on an ad.
+            }
+
+            @Override
+            public void onAdFailedToLoad(@NonNull LoadAdError adError) {
+                // Code to be executed when an ad request fails.
+                Log.d(TAG, "onAdFailedToLoad-> adError: " + adError.getMessage());
+            }
+
+            @Override
+            public void onAdImpression() {
+                // Code to be executed when an impression is recorded
+                // for an ad.
+            }
+
+            @Override
+            public void onAdLoaded() {
+                // Code to be executed when an ad finishes loading.
+                Log.d(TAG, "onAdLoaded: ");
+            }
+
+            @Override
+            public void onAdOpened() {
+                // Code to be executed when an ad opens an overlay that
+                // covers the screen.
+            }
+        });
+
+    }
+
+    private AdSize getAdSize() {
+        // Determine the screen width (less decorations) to use for the ad width.
+        Display display = requireActivity().getWindowManager().getDefaultDisplay();
+        DisplayMetrics outMetrics = new DisplayMetrics();
+        display.getMetrics(outMetrics);
+
+        float density = outMetrics.density;
+
+        float adWidthPixels = adViewContainer.getWidth();
+
+        // If the ad hasn't been laid out, default to the full screen width.
+        if (adWidthPixels == 0) {
+            adWidthPixels = outMetrics.widthPixels;
+        }
+
+        int adWidth = (int) (adWidthPixels / density);
+        return AdSize.getCurrentOrientationAnchoredAdaptiveBannerAdSize(requireContext(), adWidth);
+    }
+
 
     private void populateSectionList() {
         viewBinding.homeContainer.removeAllViews();
@@ -172,6 +297,14 @@ public class HomeFragment extends Fragment implements Toolbar.OnMenuItemClickLis
     }
 
     @Override
+    public void onPause() {
+        super.onPause();
+        if (adView != null) {
+            adView.pause();
+        }
+    }
+
+    @Override
     public void onStart() {
         super.onStart();
         EventBus.getDefault().register(this);
@@ -181,6 +314,23 @@ public class HomeFragment extends Fragment implements Toolbar.OnMenuItemClickLis
     public void onStop() {
         super.onStop();
         EventBus.getDefault().unregister(this);
+    }
+
+
+    @Override
+    public void onResume() {
+        super.onResume();
+        if (adView != null) {
+            adView.resume();
+        }
+    }
+
+    @Override
+    public void onDestroy() {
+        super.onDestroy();
+        if (adView != null) {
+            adView.destroy();
+        }
     }
 
     @Subscribe(threadMode = ThreadMode.MAIN)

@@ -6,9 +6,13 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Toast;
+
 import androidx.annotation.Nullable;
+
 import com.explorads.podcast.error.CrashReportWriter;
 import com.explorads.podcast.storage.database.PodDBAdapter;
+import com.google.android.gms.ads.MobileAds;
+
 import io.reactivex.Completable;
 import io.reactivex.android.schedulers.AndroidSchedulers;
 import io.reactivex.schedulers.Schedulers;
@@ -24,25 +28,45 @@ public class SplashActivity extends Activity {
         final View content = findViewById(android.R.id.content);
         content.getViewTreeObserver().addOnPreDrawListener(() -> false); // Keep splash screen active
 
+
+        MobileAds.initialize(this);
+
         Completable.create(subscriber -> {
-            // Trigger schema updates
-            PodDBAdapter.getInstance().open();
-            PodDBAdapter.getInstance().close();
-            subscriber.onComplete();
-        })
+                    // Trigger schema updates
+                    PodDBAdapter.getInstance().open();
+                    PodDBAdapter.getInstance().close();
+                    subscriber.onComplete();
+                })
                 .subscribeOn(Schedulers.io())
                 .observeOn(AndroidSchedulers.mainThread())
                 .subscribe(
-                    () -> {
-                        Intent intent = new Intent(SplashActivity.this, MainActivity.class);
-                        startActivity(intent);
-                        overridePendingTransition(0, 0);
-                        finish();
-                    }, error -> {
-                        error.printStackTrace();
-                        CrashReportWriter.write(error);
-                        Toast.makeText(this, error.getLocalizedMessage(), Toast.LENGTH_LONG).show();
-                        finish();
-                    });
+                        () -> {
+//                        Intent intent = new Intent(SplashActivity.this, MainActivity.class);
+//                        startActivity(intent);
+//                        overridePendingTransition(0, 0);
+//                        finish();
+
+
+                            MobileAds.initialize(this, initializationStatus -> {
+                                Intent intent = new Intent(SplashActivity.this, MainActivity.class);
+                                startActivity(intent);
+                                overridePendingTransition(0, 0);
+                                finish();
+                            });
+
+                        }, error -> {
+//                        error.printStackTrace();
+//                        CrashReportWriter.write(error);
+//                        Toast.makeText(this, error.getLocalizedMessage(), Toast.LENGTH_LONG).show();
+//                        finish();
+
+                            MobileAds.initialize(this, initializationStatus -> {
+                                error.printStackTrace();
+                                CrashReportWriter.write(error);
+                                Toast.makeText(this, error.getLocalizedMessage(), Toast.LENGTH_LONG).show();
+                                finish();
+                            });
+
+                        });
     }
 }
