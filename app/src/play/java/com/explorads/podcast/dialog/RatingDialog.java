@@ -1,4 +1,4 @@
-package de.danoeh.antennapod.dialog;
+package com.explorads.podcast.dialog;
 
 import android.app.Activity;
 
@@ -11,6 +11,7 @@ import android.util.Log;
 import java.lang.ref.WeakReference;
 import java.util.concurrent.TimeUnit;
 
+import com.explorads.podcast.core.BuildConfig;
 import com.google.android.play.core.review.ReviewInfo;
 import com.google.android.play.core.review.ReviewManager;
 import com.google.android.play.core.review.ReviewManagerFactory;

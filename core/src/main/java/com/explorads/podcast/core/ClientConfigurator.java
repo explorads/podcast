@@ -10,7 +10,7 @@ import com.explorads.podcast.core.util.NetworkUtils;
 import com.explorads.podcast.core.util.download.NetworkConnectionChangeHandler;
 import com.explorads.podcast.core.util.gui.NotificationUtils;
 import com.explorads.podcast.net.download.serviceinterface.DownloadServiceInterface;
-import com.explorads.podcast.net.ssl.SslProviderInstaller;
+//import com.explorads.podcast.net.ssl.SslProviderInstaller;
 import com.explorads.podcast.storage.database.PodDBAdapter;
 import com.explorads.podcast.core.preferences.PlaybackPreferences;
 import com.explorads.podcast.core.preferences.SleepTimerPreferences;
@@ -18,6 +18,8 @@ import com.explorads.podcast.core.preferences.UsageStatistics;
 import com.explorads.podcast.storage.preferences.UserPreferences;
 
 import java.io.File;
+
+import com.explorads.podcast.net.ssl.SslProviderInstaller;
 
 public class ClientConfigurator {
     private static boolean initialized = false;

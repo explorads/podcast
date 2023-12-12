@@ -1,4 +1,4 @@
-package de.danoeh.antennapod.net.ssl;
+package com.explorads.podcast.net.ssl;
 
 import android.content.Context;
 import com.google.android.gms.common.GoogleApiAvailability;

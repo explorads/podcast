@@ -34,12 +34,10 @@ import com.bumptech.glide.Glide;
 import com.explorads.podcast.R;
 import com.explorads.podcast.core.sync.queue.SynchronizationQueueSink;
 import com.explorads.podcast.core.util.download.FeedUpdateManager;
-import com.explorads.podcast.dialog.RatingDialog;
 import com.explorads.podcast.fragment.AudioPlayerFragment;
 import com.explorads.podcast.helpers.GoogleAdsHelper;
 import com.explorads.podcast.model.download.DownloadStatus;
 import com.explorads.podcast.net.download.serviceinterface.DownloadServiceInterface;
-import com.explorads.podcast.playback.cast.CastEnabledActivity;
 import com.explorads.podcast.ui.common.ThemeUtils;
 import com.explorads.podcast.ui.home.HomeFragment;
 import com.explorads.podcast.view.LockableBottomSheetBehavior;
@@ -80,6 +78,9 @@ import org.greenrobot.eventbus.ThreadMode;
 
 import java.util.HashMap;
 import java.util.Map;
+
+import com.explorads.podcast.dialog.RatingDialog;
+import com.explorads.podcast.playback.cast.CastEnabledActivity;
 
 /**
  * The activity that is shown when the user launches the app.

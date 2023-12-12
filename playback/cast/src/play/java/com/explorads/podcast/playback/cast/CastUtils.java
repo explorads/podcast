@@ -1,8 +1,14 @@
-package de.danoeh.antennapod.playback.cast;
+package com.explorads.podcast.playback.cast;
 
 import android.content.ContentResolver;
 import android.util.Log;
 import android.text.TextUtils;
+
+import com.explorads.podcast.model.feed.Feed;
+import com.explorads.podcast.model.feed.FeedItem;
+import com.explorads.podcast.model.feed.FeedMedia;
+import com.explorads.podcast.model.playback.Playable;
+import com.explorads.podcast.model.playback.RemoteMedia;
 import com.google.android.gms.cast.CastDevice;
 import com.google.android.gms.cast.MediaInfo;
 import com.google.android.gms.cast.MediaMetadata;

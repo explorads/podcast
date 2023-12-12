@@ -1,4 +1,4 @@
-package de.danoeh.antennapod.playback.cast;
+package com.explorads.podcast.playback.cast;
 
 import android.annotation.SuppressLint;
 import android.content.Context;
@@ -12,6 +12,16 @@ import java.util.List;
 import java.util.concurrent.atomic.AtomicBoolean;
 
 import androidx.annotation.Nullable;
+
+import com.explorads.podcast.event.PlayerErrorEvent;
+import com.explorads.podcast.event.playback.BufferUpdateEvent;
+import com.explorads.podcast.model.feed.FeedMedia;
+import com.explorads.podcast.model.playback.MediaType;
+import com.explorads.podcast.model.playback.Playable;
+import com.explorads.podcast.model.playback.RemoteMedia;
+import com.explorads.podcast.playback.base.PlaybackServiceMediaPlayer;
+import com.explorads.podcast.playback.base.PlayerStatus;
+import com.explorads.podcast.playback.base.RewindAfterPauseUtils;
 import com.google.android.gms.cast.MediaError;
 import com.google.android.gms.cast.MediaInfo;
 import com.google.android.gms.cast.MediaLoadOptions;

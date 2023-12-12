@@ -1,4 +1,4 @@
-package de.danoeh.antennapod.core.service.playback;
+package com.explorads.podcast.core.service.playback;
 
 import android.os.Bundle;
 import android.support.v4.media.session.MediaSessionCompat;

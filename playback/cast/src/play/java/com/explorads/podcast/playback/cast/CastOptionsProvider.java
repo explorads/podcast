@@ -1,4 +1,4 @@
-package de.danoeh.antennapod.playback.cast;
+package com.explorads.podcast.playback.cast;
 
 import android.annotation.SuppressLint;
 import android.content.Context;

@@ -29,7 +29,6 @@ import com.explorads.podcast.dialog.SleepTimerDialog;
 import com.explorads.podcast.dialog.VariableSpeedDialog;
 import com.explorads.podcast.menuhandler.FeedItemMenuHandler;
 import com.explorads.podcast.model.playback.Playable;
-import com.explorads.podcast.playback.cast.CastEnabledActivity;
 import com.explorads.podcast.ui.common.PlaybackSpeedIndicatorView;
 import com.explorads.podcast.view.ChapterSeekBar;
 import com.explorads.podcast.view.PlayButton;
@@ -67,6 +66,7 @@ import com.explorads.podcast.model.feed.FeedItem;
 import com.explorads.podcast.model.feed.FeedMedia;
 import com.explorads.podcast.storage.preferences.UserPreferences;
 
+import com.explorads.podcast.playback.cast.CastEnabledActivity;
 import io.reactivex.Maybe;
 import io.reactivex.android.schedulers.AndroidSchedulers;
 import io.reactivex.disposables.Disposable;

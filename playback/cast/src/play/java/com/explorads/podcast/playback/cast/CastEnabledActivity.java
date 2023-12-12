@@ -1,8 +1,9 @@
-package de.danoeh.antennapod.playback.cast;
+package com.explorads.podcast.playback.cast;
 
 import android.os.Bundle;
 import android.view.Menu;
 import androidx.appcompat.app.AppCompatActivity;
+
 import com.google.android.gms.cast.framework.CastButtonFactory;
 import com.google.android.gms.cast.framework.CastContext;
 import com.google.android.gms.common.ConnectionResult;

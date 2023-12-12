@@ -64,8 +64,8 @@ import com.explorads.podcast.core.widget.WidgetUpdater;
 import com.explorads.podcast.model.playback.MediaType;
 import com.explorads.podcast.model.playback.Playable;
 import com.explorads.podcast.playback.base.PlaybackServiceMediaPlayer;
-import com.explorads.podcast.playback.cast.CastPsmp;
-import com.explorads.podcast.playback.cast.CastStateListener;
+//import com.explorads.podcast.playback.cast.CastPsmp;
+//import com.explorads.podcast.playback.cast.CastStateListener;
 
 import org.greenrobot.eventbus.EventBus;
 import org.greenrobot.eventbus.Subscribe;
@@ -99,6 +99,9 @@ import com.explorads.podcast.playback.base.PlayerStatus;
 import com.explorads.podcast.storage.preferences.UserPreferences;
 import com.explorads.podcast.ui.appstartintent.MainActivityStarter;
 import com.explorads.podcast.ui.appstartintent.VideoPlayerActivityStarter;
+
+import com.explorads.podcast.playback.cast.CastPsmp;
+import com.explorads.podcast.playback.cast.CastStateListener;
 import io.reactivex.Completable;
 import io.reactivex.Observable;
 import io.reactivex.Single;

@@ -63,8 +63,9 @@ import com.explorads.podcast.model.feed.FeedItem;
 import com.explorads.podcast.model.feed.FeedMedia;
 import com.explorads.podcast.model.playback.Playable;
 import com.explorads.podcast.playback.base.PlayerStatus;
-import com.explorads.podcast.playback.cast.CastEnabledActivity;
 import com.explorads.podcast.ui.appstartintent.MainActivityStarter;
+
+import com.explorads.podcast.playback.cast.CastEnabledActivity;
 import io.reactivex.Observable;
 import io.reactivex.android.schedulers.AndroidSchedulers;
 import io.reactivex.disposables.Disposable;

@@ -1,4 +1,4 @@
-package de.danoeh.antennapod.playback.cast;
+package com.explorads.podcast.playback.cast;
 
 import android.content.Context;
 import androidx.annotation.NonNull;
