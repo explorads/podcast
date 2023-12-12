@@ -361,7 +361,7 @@
             android:name="com.explorads.podcast.receiver.SPAReceiver"
             android:exported="true">
             <intent-filter>
-                <action android:name="de.danoeh.antennapdsp.intent.SP_APPS_QUERY_FEEDS_RESPONSE"/>
+                <action android:name="com.explorads.podcastsp.intent.SP_APPS_QUERY_FEEDS_RESPONSE"/>
             </intent-filter>
         </receiver>
 
