@@ -50,10 +50,10 @@
   <string name="home_continue_title">Продовжити прослуховування</string>
   <string name="home_new_title">Переглянути, що нового</string>
   <string name="home_downloads_title">Керування завантаженнями</string>
-  <string name="home_welcome_title">Вітаємо у AntennaPod!</string>
+  <string name="home_welcome_title">Вітаємо у Hidden Pod!</string>
   <string name="home_welcome_text">Ви не підписані на щодний подкаст.
 Відкрийте бокове меню для додавання.</string>
-  <string name="notification_permission_text">AntennaPod потребує вашого дозволу, щоб показувати сповіщення під час завантаження епізодів.</string>
+  <string name="notification_permission_text">Hidden Pod потребує вашого дозволу, щоб показувати сповіщення під час завантаження епізодів.</string>
   <string name="notification_permission_denied">Ви відмовили в дозволі.</string>
   <string name="open_settings">Відкрити налаштування</string>
   <string name="configure_home">Налаштувати домашній екран</string>
@@ -261,7 +261,7 @@
   <string name="playback_error_timeout">Операція минула</string>
   <string name="playback_error_source">Не вдається отримати доступ до медіафайлу</string>
   <string name="no_media_playing_label">Немає що грати</string>
-  <string name="unknown_media_key">AntennaPod - Невідомий медіа ключ: %1$d</string>
+  <string name="unknown_media_key">Hidden Pod - Невідомий медіа ключ: %1$d</string>
   <string name="error_file_not_found">Файл не знайдено</string>
   <string name="no_media_label">Елемент не містить медіафайлу</string>
   <!--Queue operations-->
@@ -394,15 +394,15 @@
   <string name="pref_contribute">Посприяти</string>
   <!--About screen-->
   <string name="about_pref">Про програму</string>
-  <string name="antennapod_version">Версія AntennaPod</string>
+  <string name="antennapod_version">Версія Hidden Pod</string>
   <string name="contributors">Учасники</string>
-  <string name="contributors_summary">Кожен може допомогти покращити AntennaPod - за допомогою коду, перекладу або допомагаючи користувачам на нашому форумі</string>
+  <string name="contributors_summary">Кожен може допомогти покращити Hidden Pod - за допомогою коду, перекладу або допомагаючи користувачам на нашому форумі</string>
   <string name="developers">Розробники</string>
   <string name="translators">Перекладачі</string>
   <string name="special_thanks">Особлива подяка</string>
   <string name="privacy_policy">Політика конфіденційності</string>
   <string name="licenses">Ліцензії</string>
-  <string name="licenses_summary">AntennaPod використовує інше чудове програмне забезпечення</string>
+  <string name="licenses_summary">Hidden Pod використовує інше чудове програмне забезпечення</string>
   <!--Search-->
   <string name="search_status_no_results">Жодних результатів немає</string>
   <string name="type_to_search">Введіть запит для пошуку</string>
@@ -425,8 +425,8 @@
   <string name="html_export_summary">Показати свої підписки другу</string>
   <string name="opml_export_summary">Перенесіть свої підписки на інший додаток для подкастів</string>
   <string name="opml_import_summary">Імпортуйте свої підписки з іншого додатка для подкастів</string>
-  <string name="database_export_summary">Перенесіть підписки, прослухані епізоди та чергу на AntennaPod в іншому пристрої</string>
-  <string name="database_import_summary">Імпортуйте базу даних AntennaPod з іншого пристрою</string>
+  <string name="database_export_summary">Перенесіть підписки, прослухані епізоди та чергу на Hidden Pod в іншому пристрої</string>
+  <string name="database_import_summary">Імпортуйте базу даних Hidden Pod з іншого пристрою</string>
   <string name="opml_add_podcast_label">Імпортувати список подкастів (OPML)</string>
   <string name="opml_reader_error">Помилка при читанні документа OPML:</string>
   <string name="opml_import_error_no_file">Жодного файлу не обрано!</string>
@@ -443,8 +443,8 @@
   <string name="export_success_sum">Файл було записано в:\n\n%1$s</string>
   <string name="opml_import_ask_read_permission">Щоб прочитати файл OPML потрібен доступ до зовнішнього носія</string>
   <string name="successful_import_label">Імпорт - успішний</string>
-  <string name="import_ok">Будь ласка, натисніть OK, щоб перезапустити AntennaPod</string>
-  <string name="import_no_downgrade">Ця база даних була експортована з новішою версією AntennaPod. Ваша поточна установка ще не знає, як обробляти цей файл.</string>
+  <string name="import_ok">Будь ласка, натисніть OK, щоб перезапустити Hidden Pod</string>
+  <string name="import_no_downgrade">Ця база даних була експортована з новішою версією Hidden Pod. Ваша поточна установка ще не знає, як обробляти цей файл.</string>
   <string name="favorites_export_label">Експорт улюбленого</string>
   <string name="favorites_export_summary">Експортувати збережені улюблені файли</string>
   <!--Sleep timer-->
@@ -485,7 +485,7 @@
   <string name="username_label">Ім\'я користувача</string>
   <string name="password_label">Пароль</string>
   <string name="gpodnetauth_device_name">Назва пристрою</string>
-  <string name="gpodnetauth_device_name_default">AntennaPod на %1$s</string>
+  <string name="gpodnetauth_device_name_default">Hidden Pod на %1$s</string>
   <string name="gpodnetauth_existing_devices">Існуючі пристрої</string>
   <string name="gpodnetauth_create_device">Створити пристрій</string>
   <string name="gpodnetauth_finish_descr">Поздоровляємо! Ваш обліковий запис на gpodder.net зараз пов\'язаний за вашим пристроєм</string>
@@ -500,7 +500,7 @@
   <string name="gpodnetsync_pref_report_failed">Невдало</string>
   <string name="gpodnetsync_username_characters_error">Імена користувачів можуть містити лише літери, цифри, дефіси та підкреслення.</string>
   <!--Directory chooser-->
-  <string name="choose_data_directory_message">Оберіть, будь ласка, базовий каталог даних. AntennaPod створить відповідні підрозділи.</string>
+  <string name="choose_data_directory_message">Оберіть, будь ласка, базовий каталог даних. Hidden Pod створить відповідні підрозділи.</string>
   <string name="choose_data_directory_available_space">%1$s з %2$s вільно</string>
   <string name="pref_pausePlaybackForFocusLoss_sum">Призупиняти програвання замість зниження гучності коли інша програма хоче програти звук</string>
   <!--Online feed view-->
@@ -530,7 +530,7 @@
   <string name="feed_tags_label">Мітки</string>
   <string name="episode_filters_description">Перелік термінів, що використовуються для вирішення чи слід завантажувати епізод автоматично</string>
   <string name="keep_updated_summary">Включати цей подкаст під час (автоматичного) оновлення всіх подкастів</string>
-  <string name="auto_download_disabled_globally">Автозавантаження вимкнено в налаштуваннях AntennaPod</string>
+  <string name="auto_download_disabled_globally">Автозавантаження вимкнено в налаштуваннях Hidden Pod</string>
   <string name="statistics_episodes_on_device">Епізоди на пристрої:</string>
   <string name="statistics_space_used">Використано простору:</string>
   <string name="statistics_view_all">Переглянути всі подкасти »</string>
@@ -552,7 +552,7 @@
   <string name="local_folder">Локальна папка</string>
   <string name="reconnect_local_folder">Перепідключити локальну папку</string>
   <string name="reconnect_local_folder_warning">У разі відмови у дозволі ви можете використовувати це для повторного підключення до тієї ж папки. Не вибирайте іншу папку.</string>
-  <string name="local_feed_description">Цей віртуальний подкаст був створений шляхом додавання папки до AntennaPod.</string>
+  <string name="local_feed_description">Цей віртуальний подкаст був створений шляхом додавання папки до Hidden Pod.</string>
   <string name="unable_to_start_system_file_manager">Не запускається системний файловий менеджер</string>
   <string name="filter">Фільтр</string>
   <string name="hide_is_favorite_label">В улюблених</string>

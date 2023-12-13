@@ -215,7 +215,7 @@
   <string name="playback_error_timeout">Ekintzak denbora muga gainditu du</string>
   <string name="playback_error_source">Ezinezkoa da fitxategia atzematea</string>
   <string name="no_media_playing_label">Ez dago ezer erreproduzitzen</string>
-  <string name="unknown_media_key">AntennaPod - Media tekla ezezaguna: %1$d</string>
+  <string name="unknown_media_key">Hidden Pod - Media tekla ezezaguna: %1$d</string>
   <string name="error_file_not_found">Ez da artxibategirik aurkitu</string>
   <string name="no_media_label">Elementuak ez du multimedia fitxategirik</string>
   <!--Queue operations-->
@@ -354,7 +354,7 @@
   <string name="pref_show_subscription_title_summary">Erakutsi harpidetzaren izenburua azaleko irudiaren azpian.</string>
   <!--About screen-->
   <string name="about_pref">Honi buruz</string>
-  <string name="antennapod_version">AntennaPod bertsioa</string>
+  <string name="antennapod_version">Hidden Pod bertsioa</string>
   <string name="contributors">Laguntzaileak</string>
   <string name="contributors_summary">Denek lagun dezakete gure foroan kodea, itzulpenak edo erabiltzaileei laguntza emanez.</string>
   <string name="developers">Garatzaileak</string>
@@ -362,7 +362,7 @@
   <string name="special_thanks">Esker bereziak</string>
   <string name="privacy_policy">Pribatutasun politika</string>
   <string name="licenses">Baimenak</string>
-  <string name="licenses_summary">AntennaPod-ek beste software ezin hobeak erabiltzen ditu</string>
+  <string name="licenses_summary">Hidden Pod-ek beste software ezin hobeak erabiltzen ditu</string>
   <!--Search-->
   <string name="search_status_no_results">Ez da emaitzarik aurkitu</string>
   <string name="type_to_search">Idatzi kontsulta bilatzeko</string>
@@ -404,8 +404,8 @@
   <string name="export_success_sum">Esportatutako artxibategia hemen gorde da:\n\n%1$s</string>
   <string name="opml_import_ask_read_permission">Kanpo biltegirako sarrera behar duzu OPML artxibategiak irakurtzeko</string>
   <string name="successful_import_label">Inportate arrakastatsua</string>
-  <string name="import_ok">Sakatu OK AntennaPod berrabiarazteko</string>
-  <string name="import_no_downgrade">Datu-basea AntennaPod-en bertsio berriago batekin esportatu zen. Uneko aplikazioak ez daki nola inportatu.</string>
+  <string name="import_ok">Sakatu OK Hidden Pod berrabiarazteko</string>
+  <string name="import_no_downgrade">Datu-basea Hidden Pod-en bertsio berriago batekin esportatu zen. Uneko aplikazioak ez daki nola inportatu.</string>
   <string name="favorites_export_label">Gogokoak esportatu</string>
   <string name="favorites_export_summary">Gorde diren gogokoak esportatu artxibatzeko</string>
   <!--Sleep timer-->
@@ -436,15 +436,15 @@
   <string name="synchronization_choose_title">Aukeratu sinkronizazio-hornitzailea</string>
   <string name="synchronization_summary_unchoosen">Hainbat hornitzaileren artean hauta dezakezu zure harpidetzak sinkronizatzeko eta kapituluen jokoaren egoera</string>
   <string name="dialog_choose_sync_service_title">Aukeratu sinkronizazio-hornitzailea</string>
-  <string name="gpodnet_description">Gpodder.net kode irekiko podcastak sinkronizatzeko zerbitzu bat da, zure zerbitzarian bertan instala dezakezuna. Gpodder.net AntennaPod proiektutik independentea da.</string>
-  <string name="synchronization_summary_nextcloud">Gpoddersync kode irekiko Nextcloud aplikazio bat da, zure zerbitzarian erraz instala dezakezuna. Aplikazioa ez dator bat AntennaPod proiektuarekin.</string>
+  <string name="gpodnet_description">Gpodder.net kode irekiko podcastak sinkronizatzeko zerbitzu bat da, zure zerbitzarian bertan instala dezakezuna. Gpodder.net Hidden Pod proiektutik independentea da.</string>
+  <string name="synchronization_summary_nextcloud">Gpoddersync kode irekiko Nextcloud aplikazio bat da, zure zerbitzarian erraz instala dezakezuna. Aplikazioa ez dator bat Hidden Pod proiektuarekin.</string>
   <string name="synchronization_nextcloud_authenticate_browser">Eman sarbidea web nabigatzaile irekiaren bidez eta itzuli AntennaPodera.</string>
   <string name="gpodnetauth_login_butLabel">Hasi saioa</string>
   <string name="gpodnetauth_encryption_warning">Pasahitza eta datuak ez daude enkriptaturik!</string>
   <string name="username_label">Erabioltzailea</string>
   <string name="password_label">Pasahitza</string>
   <string name="gpodnetauth_device_name">Gailuaren izena</string>
-  <string name="gpodnetauth_device_name_default">AntennaPod aktibatuta %1$s</string>
+  <string name="gpodnetauth_device_name_default">Hidden Pod aktibatuta %1$s</string>
   <string name="gpodnetauth_existing_devices">Dauden gailuak</string>
   <string name="gpodnetauth_create_device">Sortu gailua</string>
   <string name="gpodnetauth_finish_descr">Zorionak! Zure gpodder.net kontua zure gailuarekin lotuta dago orain. Hemendik aurrera, AntennaPodek automatikoki sinkronizatuko ditu zure gailuaren harpidetzak bzure gpodder.net kontuarekin.</string>
@@ -464,7 +464,7 @@
   <string name="gpodnetsync_pref_report_failed">Huts egin du</string>
   <string name="gpodnetsync_username_characters_error">Erabiltzaile-izenek letrak, digitu, erdiko gidoi eta gidoi baxuak baino ezin dituzte eduki.</string>
   <!--Directory chooser-->
-  <string name="choose_data_directory_message">Aukeratu datuen karpetaren erroa. AntennaPod-ek azpidirektorio egokiak sortuko ditu.</string>
+  <string name="choose_data_directory_message">Aukeratu datuen karpetaren erroa. Hidden Pod-ek azpidirektorio egokiak sortuko ditu.</string>
   <string name="choose_data_directory_available_space">%1$s  %2$s -tik libre</string>
   <string name="pref_pausePlaybackForFocusLoss_sum">Bolumena jaitsi beharrean erreprodukzioa geldiarazi beste aplikazio batek soinuak erreproduzitzen dituenean</string>
   <!--Online feed view-->
@@ -497,7 +497,7 @@
   <string name="multi_feed_common_tags_info">{fa-info-circle} Hautatutako harpidetza guztien ohiko etiketak baino ez dira erakusten. Gainerako etiketek ez dute eraginik izango.</string>
   <string name="episode_filters_description">Saio bat deskarga automatikotik kanpo utzi behar den edo ez erabakitzeko erabilitako terminoen zerrenda</string>
   <string name="keep_updated_summary">Eguneratu podcast hau ere podcast guztiak (auto-)eguneratzean</string>
-  <string name="auto_download_disabled_globally">Deskarga automatikoa desgaituta dago AntennaPod-en lehentasun orokorretan</string>
+  <string name="auto_download_disabled_globally">Deskarga automatikoa desgaituta dago Hidden Pod-en lehentasun orokorretan</string>
   <string name="statistics_time_played">Jokatutako denbora:</string>
   <string name="statistics_total_duration">Iraupena guztira (zenbatespena):</string>
   <string name="statistics_episodes_on_device">Gailuko saioak:</string>
@@ -522,7 +522,7 @@
   <string name="local_folder">Tokiko karpeta</string>
   <string name="reconnect_local_folder">Birkonektatu tokiko karpeta</string>
   <string name="reconnect_local_folder_warning">Baimenik izan ezean, hau erabil dezakezu karpeta berdina birkonektatzeko. Ez aukeratu beste karpetarik.</string>
-  <string name="local_feed_description">Podcast birtual hau AntennaPod-i karpeta bat gehituta sortu da</string>
+  <string name="local_feed_description">Podcast birtual hau Hidden Pod-i karpeta bat gehituta sortu da</string>
   <string name="unable_to_start_system_file_manager">Ezin da sistemaren fitxategi kudeatzailea abiarazi</string>
   <string name="filter">Iragazia</string>
   <string name="hide_is_favorite_label">Gogokoa da</string>

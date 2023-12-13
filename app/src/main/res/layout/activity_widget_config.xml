@@ -18,7 +18,7 @@
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:scaleType="centerCrop"
-            app:srcCompat="@drawable/teaser" />
+            app:srcCompat="@mipmap/ic_launcher" />
 
         <include
             android:id="@+id/widget_config_preview"

@@ -53,7 +53,7 @@
   <string name="home_downloads_title">Hallinnoi latauksia</string>
   <string name="home_welcome_title">Tervetuloa AntennaPodiin!</string>
   <string name="home_welcome_text">Et tilaa yhtään podcastia vielä. Avaa sivuvalikko lisätäksesi podcastin.</string>
-  <string name="notification_permission_text">AntennaPod tarvitsee lupasi ilmoitusten näyttämiseen jaksojen lataamisen aikana.</string>
+  <string name="notification_permission_text">Hidden Pod tarvitsee lupasi ilmoitusten näyttämiseen jaksojen lataamisen aikana.</string>
   <string name="notification_permission_denied">Et antanut lupaa.</string>
   <string name="open_settings">Avaa asetukset</string>
   <string name="configure_home">Mukauta kotinäkymä</string>
@@ -279,10 +279,10 @@
   <string name="download_type_feed">Syöte</string>
   <string name="download_type_media">Mediatiedosto</string>
   <string name="null_value_podcast_error">Ei voida näyttää olematonta podcastia</string>
-  <string name="no_feed_url_podcast_found_by_search">Ehdotetulla podcastilla ei ollut RSS-linkkiä, AntennaPod löysi mahdollisesti vastaavan podcastin</string>
+  <string name="no_feed_url_podcast_found_by_search">Ehdotetulla podcastilla ei ollut RSS-linkkiä, Hidden Pod löysi mahdollisesti vastaavan podcastin</string>
   <string name="authentication_notification_title">Todentaminen vaaditaan</string>
   <string name="confirm_mobile_download_dialog_title">Vahvista mobiililataus</string>
-  <string name="confirm_mobile_download_dialog_message">Lataaminen mobiilidatayhteydellä on poissa päältä asetuksissa. AntennaPod voi ladata jakson myöhemmin automaattisesti, kun Wi-Fi-yhteys on käytettävissä.</string>
+  <string name="confirm_mobile_download_dialog_message">Lataaminen mobiilidatayhteydellä on poissa päältä asetuksissa. Hidden Pod voi ladata jakson myöhemmin automaattisesti, kun Wi-Fi-yhteys on käytettävissä.</string>
   <string name="confirm_mobile_download_dialog_download_later">Lataa myöhemmin</string>
   <string name="confirm_mobile_download_dialog_allow_this_time">Lataa silti</string>
   <string name="confirm_mobile_streaming_notification_title">Vahvista suoratoisto mobiilidatayhteydellä</string>
@@ -296,7 +296,7 @@
   <string name="playback_error_source">Mediatiedostoa ei voida käyttää</string>
   <string name="playback_error_unknown">Tuntematon virhe</string>
   <string name="no_media_playing_label">Mediaa ei toisteta</string>
-  <string name="unknown_media_key">AntennaPod - Tuntematon media-avain: %1$d</string>
+  <string name="unknown_media_key">Hidden Pod - Tuntematon media-avain: %1$d</string>
   <string name="error_file_not_found">Tiedostoa ei löytynyt</string>
   <string name="no_media_label">Kohde ei sisällä mediatiedostoa</string>
   <!--Queue operations-->
@@ -490,7 +490,7 @@
   <string name="pref_show_subscription_title_summary">Näytä tilauksen nimi kansikuvan alapuolella</string>
   <!--About screen-->
   <string name="about_pref">Tietoja</string>
-  <string name="antennapod_version">AntennaPod versio</string>
+  <string name="antennapod_version">Hidden Pod versio</string>
   <string name="contributors">Osallistujat</string>
   <string name="contributors_summary">Kuka tahansa voi auttaa tekemään AntennaPodista paremman - koodilla, käännöksillä, tai avustamalla käyttäjiä foorumilla</string>
   <string name="developers">Kehittäjät</string>
@@ -498,7 +498,7 @@
   <string name="special_thanks">Erityiskiitokset</string>
   <string name="privacy_policy">Tietosuojakäytäntö</string>
   <string name="licenses">Lisenssit</string>
-  <string name="licenses_summary">AntennaPod käyttää muita hienoja ohjelmistoja</string>
+  <string name="licenses_summary">Hidden Pod käyttää muita hienoja ohjelmistoja</string>
   <!--Search-->
   <string name="search_status_no_results">Ei löydetty tuloksia</string>
   <string name="type_to_search">Kirjoita hakulause etsiäksesi</string>
@@ -522,7 +522,7 @@
   <string name="opml_export_summary">Siirrä tilauksesi toiseen podcast-sovellukseen</string>
   <string name="opml_import_summary">Tuo tilauksesi toisesta podcast-sovelluksesta</string>
   <string name="database_export_summary">Siirrä tilaukset, kuunnellut jaksot ja jono toisella laitteella olevaan AntennaPodiin</string>
-  <string name="database_import_summary">Tuo AntennaPod-tietokanta toiselta laitteelta</string>
+  <string name="database_import_summary">Tuo Hidden Pod-tietokanta toiselta laitteelta</string>
   <string name="opml_import_label">OPML-tuonti</string>
   <string name="opml_add_podcast_label">Tuo podcastien lista (OPML)</string>
   <string name="opml_reader_error">Virhe lukiessa OPML dokumenttia:</string>
@@ -573,8 +573,8 @@
   <string name="synchronization_choose_title">Valitse synkronointipalveluntarjoaja</string>
   <string name="synchronization_summary_unchoosen">Voit valita useista palveluntarjoajista, joiden kanssa voit synkronoida tilauksesi ja jaksojen toistotilan</string>
   <string name="dialog_choose_sync_service_title">Valitse synkronointipalveluntarjoaja</string>
-  <string name="gpodnet_description">Gpodder.net on avoimen lähdekoodin podcast-synkronointipalvelu, jonka voit asentaa omalle palvelimellesi. Gpodder.net on riippumaton AntennaPod-projektista.</string>
-  <string name="synchronization_summary_nextcloud">Gpoddersync on avoimen lähdekoodin Nextcloud-sovellus, jonka voit helposti asentaa omalle palvelimellesi. Sovellus on riippumaton AntennaPod-projektista.</string>
+  <string name="gpodnet_description">Gpodder.net on avoimen lähdekoodin podcast-synkronointipalvelu, jonka voit asentaa omalle palvelimellesi. Gpodder.net on riippumaton Hidden Pod-projektista.</string>
+  <string name="synchronization_summary_nextcloud">Gpoddersync on avoimen lähdekoodin Nextcloud-sovellus, jonka voit helposti asentaa omalle palvelimellesi. Sovellus on riippumaton Hidden Pod-projektista.</string>
   <string name="synchronization_host_explanation">Voit valita oman synkronointipalvelimesi. Kun olet tunnistanut mieluisen synkronointipalvelimesi, anna sen osoite tässä.</string>
   <string name="synchronization_host_label">Palvelimen osoite</string>
   <string name="proceed_to_login_butLabel">Jatka kirjautumaan</string>
@@ -587,10 +587,10 @@
   <string name="synchronization_login_butLabel">Kirjaudu</string>
   <string name="synchronization_selectDevice_explanation">Valitse laite, jonka loit synkronointipalvelimella, tai luo uusi.</string>
   <string name="gpodnetauth_device_name">Laitteen nimi</string>
-  <string name="gpodnetauth_device_name_default">AntennaPod laitteella %1$s</string>
+  <string name="gpodnetauth_device_name_default">Hidden Pod laitteella %1$s</string>
   <string name="gpodnetauth_existing_devices">Olemassaolevat laitteet</string>
   <string name="gpodnetauth_create_device">Luo laite</string>
-  <string name="gpodnetauth_finish_descr">Onneksi olkoon! Sinun gpodder.net tili on liitetty laitteeseesi. AntennaPod alkaa automaattisesti synkronoimaan gpodder.net tiliisi.</string>
+  <string name="gpodnetauth_finish_descr">Onneksi olkoon! Sinun gpodder.net tili on liitetty laitteeseesi. Hidden Pod alkaa automaattisesti synkronoimaan gpodder.net tiliisi.</string>
   <string name="gpodnetauth_finish_butsyncnow">Aloita synkrointi nyt</string>
   <string name="pref_gpodnet_setlogin_information_title">Vaihda kirjautumistietoja</string>
   <string name="pref_gpodnet_setlogin_information_sum">Vaihda kirjautumistietoja gpodder.net tiliisi.</string>
@@ -608,7 +608,7 @@
   <string name="gpodnetsync_username_characters_error">Käyttäjätunnukset saavat sisältää vain kirjaimia, numeroita, viivoja ja aliviivoja.</string>
   <!--Directory chooser-->
   <string name="choose_data_directory">Valitse datahakemisto</string>
-  <string name="choose_data_directory_message">Valitse datahakemiston juuri. AntennaPod luo tarvittavat alihakemistot</string>
+  <string name="choose_data_directory_message">Valitse datahakemiston juuri. Hidden Pod luo tarvittavat alihakemistot</string>
   <string name="choose_data_directory_available_space">%1$s / %2$s vapaana</string>
   <string name="pref_pausePlaybackForFocusLoss_sum">Pysäytä toisto äänenvoimakkuuden hiljentämisen sijasta, kun toinen sovellus haluaa soittaa ääniä.</string>
   <string name="pref_pausePlaybackForFocusLoss_title">Pysäytä keskeytyksiin</string>

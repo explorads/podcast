@@ -38,7 +38,7 @@
   <string name="home_continue_title">Lanjut dengarkan</string>
   <string name="home_new_title">Lihat apa yang baru</string>
   <string name="home_downloads_title">Atur unduhan</string>
-  <string name="home_welcome_title">Selamat datang ke AntennaPod!</string>
+  <string name="home_welcome_title">Selamat datang ke Hidden Pod!</string>
   <string name="home_welcome_text">Anda belum berlangganan podcast apa pun. Buka menu samping untuk menambahkan podcast.</string>
   <string name="configure_home">Konfigurasikan Layar Utama</string>
   <!--Download Statistics fragment-->
@@ -209,7 +209,7 @@
   <string name="download_type_feed">Umpan</string>
   <string name="download_type_media">Berkas Media</string>
   <string name="null_value_podcast_error">Tidak ada podcast disediakan yang dapat ditampilkan.</string>
-  <string name="no_feed_url_podcast_found_by_search">Podcast yang disarankan tidak memiliki tautan RSS, AntennaPod menemukan podcast yang mungkin serupa</string>
+  <string name="no_feed_url_podcast_found_by_search">Podcast yang disarankan tidak memiliki tautan RSS, Hidden Pod menemukan podcast yang mungkin serupa</string>
   <string name="authentication_notification_title">Autentikasi dibutuhkan</string>
   <string name="confirm_mobile_streaming_notification_message">Pemutaran siaran melalui jaringan data seluler dimatikan di setelan. Ketuk untuk tetap mendengarkan siaran.</string>
   <string name="confirm_mobile_streaming_button_always">Selalu</string>
@@ -220,7 +220,7 @@
   <string name="playback_error_timeout">Masa beroperasi dihentikan</string>
   <string name="playback_error_source">Tidak dapat mengakses berkas media</string>
   <string name="no_media_playing_label">Tidak ada media yang dimainkan</string>
-  <string name="unknown_media_key">AntennaPod - Kunci media tidak diketahui: %1$d</string>
+  <string name="unknown_media_key">Hidden Pod - Kunci media tidak diketahui: %1$d</string>
   <string name="error_file_not_found">Berkas tidak ditemukan</string>
   <string name="no_media_label">Barang yang dipilih tidak memiliki berkas media</string>
   <!--Queue operations-->
@@ -343,7 +343,7 @@
   <string name="pref_no_browser_found">Tidak ada peramban web yang ditemukan.</string>
   <string name="pref_enqueue_downloaded_summary">Masukan episode yang telah diunduh ke antrian</string>
   <string name="behavior">Perilaku</string>
-  <string name="pref_default_page_sum">Halaman yang ditampilkan saat AntennaPod dibuka</string>
+  <string name="pref_default_page_sum">Halaman yang ditampilkan saat Hidden Pod dibuka</string>
   <string name="remember_last_page">Ingat halaman terakhir</string>
   <string name="pref_delete_removes_from_queue_sum">Secara otomatis hapus sebuah episode dari antrian ketika episode dihapus.</string>
   <string name="pref_filter_feed_sum">Filter langganan Anda di laci navigasi dan layar berlangganan.</string>
@@ -360,15 +360,15 @@
   <string name="pref_show_subscription_title_summary">Tampilkan judul langganan di bawah gambar sampul.</string>
   <!--About screen-->
   <string name="about_pref">Tentang</string>
-  <string name="antennapod_version">Versi AntennaPod</string>
+  <string name="antennapod_version">Versi Hidden Pod</string>
   <string name="contributors">Para Kontributor</string>
-  <string name="contributors_summary">Semua orang dapat membantu AntennaPod menjadi lebih baik - kontribusi kode, penambahan terjemahan atau membantu satu sama lain di forum kami</string>
+  <string name="contributors_summary">Semua orang dapat membantu Hidden Pod menjadi lebih baik - kontribusi kode, penambahan terjemahan atau membantu satu sama lain di forum kami</string>
   <string name="developers">Para Pengembang</string>
   <string name="translators">Para Penerjemah</string>
   <string name="special_thanks">Ucapan terima kasih</string>
   <string name="privacy_policy">Kebijakan privasi</string>
   <string name="licenses">Lisensi</string>
-  <string name="licenses_summary">AntennaPod menggunakan perangkat lunak hebat lainnya</string>
+  <string name="licenses_summary">Hidden Pod menggunakan perangkat lunak hebat lainnya</string>
   <!--Search-->
   <string name="search_status_no_results">Tidak ada hasil yang ditemukan</string>
   <string name="type_to_search">Tulis kueri untuk mencari</string>
@@ -391,8 +391,8 @@
   <string name="html_export_summary">Tunjukkan langganan-langganan Anda kepada teman Anda</string>
   <string name="opml_export_summary">Transfer langganan ke aplikasi podcast lainnya</string>
   <string name="opml_import_summary">Impor langganan dari aplikasi podcast lainnya</string>
-  <string name="database_export_summary">Transfer langganan, episode yang diputar, dan antrean ke AntennaPod di perangkat lain</string>
-  <string name="database_import_summary">Impor database AntennaPod dari perangkat lain</string>
+  <string name="database_export_summary">Transfer langganan, episode yang diputar, dan antrean ke Hidden Pod di perangkat lain</string>
+  <string name="database_import_summary">Impor database Hidden Pod dari perangkat lain</string>
   <string name="opml_import_label">Impor OPML</string>
   <string name="opml_add_podcast_label">Impor daftar podcast (OPML)</string>
   <string name="opml_reader_error">Sebuah kesalahan terjadi ketika membaca dokumen OPML:</string>
@@ -410,8 +410,8 @@
   <string name="export_success_sum">Berkas yang diekspor ditulis ke:\n\n%1$s</string>
   <string name="opml_import_ask_read_permission">Akses ke penyimpanan eksternal diperlukan untuk membaca berkas OPML</string>
   <string name="successful_import_label">Impor sukses!</string>
-  <string name="import_ok">Tolong tekan OK untuk mengulang kembali AntennaPod</string>
-  <string name="import_no_downgrade">Database ini diekspor pada versi AntennaPod yang lebih baru. Versi AntennaPod yang Anda miliki belum dapat menangani berkas ini.</string>
+  <string name="import_ok">Tolong tekan OK untuk mengulang kembali Hidden Pod</string>
+  <string name="import_no_downgrade">Database ini diekspor pada versi Hidden Pod yang lebih baru. Versi Hidden Pod yang Anda miliki belum dapat menangani berkas ini.</string>
   <string name="favorites_export_label">Ekspor Favorit</string>
   <string name="favorites_export_summary">Ekspor favorites disimpan ke file</string>
   <!--Sleep timer-->
@@ -439,12 +439,12 @@
   <string name="synchronization_choose_title">Pilih layanan penyedia sinkronisasi</string>
   <string name="synchronization_summary_unchoosen">Anda dapat memilih dari berbagai layanan penyedia  untuk menyinkronisasikan langganan dan status memutar episode Anda dengan</string>
   <string name="dialog_choose_sync_service_title">Pilih layanan penyedia sinkronisasi</string>
-  <string name="gpodnet_description">Gpodder.net adalah layanan sinkronisasi podcast sumber terbuka yang bisa Anda pasang pada server Anda sendiri. Gpodder.net tidak bergantung kepada proyek AntennaPod project.</string>
-  <string name="synchronization_summary_nextcloud">Gpoddersync adalah aplikasi Nextcloud bersumber terbuka yang dapat Anda pasang di server Anda sendiri. Gpoddersync tidak bergantung kepada proyek AntennaPod project.</string>
+  <string name="gpodnet_description">Gpodder.net adalah layanan sinkronisasi podcast sumber terbuka yang bisa Anda pasang pada server Anda sendiri. Gpodder.net tidak bergantung kepada proyek Hidden Pod project.</string>
+  <string name="synchronization_summary_nextcloud">Gpoddersync adalah aplikasi Nextcloud bersumber terbuka yang dapat Anda pasang di server Anda sendiri. Gpoddersync tidak bergantung kepada proyek Hidden Pod project.</string>
   <string name="synchronization_host_explanation">Anda dapat memilih server Anda sendiri untuk sinkronisasi. Saat sudah memilih server sinkronisasi yang diinginkan, masukkan alamat server Anda di sini.</string>
   <string name="synchronization_host_label">Alamat server</string>
   <string name="proceed_to_login_butLabel">Masuk</string>
-  <string name="synchronization_nextcloud_authenticate_browser">Berikan akses untuk membuka peramban dan kembali ke AntennaPod.</string>
+  <string name="synchronization_nextcloud_authenticate_browser">Berikan akses untuk membuka peramban dan kembali ke Hidden Pod.</string>
   <string name="gpodnetauth_login_butLabel">Masuk</string>
   <string name="synchronization_credentials_explanation">Mohon sediakan kredensial dari akun Anda pada server sinkronisasi yang dipilih.</string>
   <string name="gpodnetauth_encryption_warning">Kata sandi dan data tidak dienkripsi!</string>
@@ -453,10 +453,10 @@
   <string name="synchronization_login_butLabel">Masuk</string>
   <string name="synchronization_selectDevice_explanation">Mohon pilih perangkat yang Anda buat di server sinkronisasi atau buat yang baru.</string>
   <string name="gpodnetauth_device_name">Nama perangkat</string>
-  <string name="gpodnetauth_device_name_default">AntennaPod di %1$s</string>
+  <string name="gpodnetauth_device_name_default">Hidden Pod di %1$s</string>
   <string name="gpodnetauth_existing_devices">Perangkat yang sudah ada</string>
   <string name="gpodnetauth_create_device">Buat perangkat</string>
-  <string name="gpodnetauth_finish_descr">Selamat! Akun gpodder.net Anda sekarang terhubung dengan perangkat Anda. AntennaPod sekarang akan secara otomatis sinkronkan langganan pada perangkat Anda dengan akun gpodder.net Anda.</string>
+  <string name="gpodnetauth_finish_descr">Selamat! Akun gpodder.net Anda sekarang terhubung dengan perangkat Anda. Hidden Pod sekarang akan secara otomatis sinkronkan langganan pada perangkat Anda dengan akun gpodder.net Anda.</string>
   <string name="gpodnetauth_finish_butsyncnow">Mulai sinkronisasi sekarang</string>
   <string name="pref_gpodnet_setlogin_information_title">Ubah informasi login</string>
   <string name="pref_gpodnet_setlogin_information_sum">Ubah informasi login untuk akun gpodder.net Anda</string>
@@ -473,7 +473,7 @@
   <string name="gpodnetsync_pref_report_failed">Gagal</string>
   <string name="gpodnetsync_username_characters_error">Nama pengguna hanya dapat mengandung huruf, angka, tanda penghubung, dan underscore.</string>
   <!--Directory chooser-->
-  <string name="choose_data_directory_message">Tolong pilih dasar dari folder data Anda. AntennaPod akan membuat sub-direktori yang sesuai.</string>
+  <string name="choose_data_directory_message">Tolong pilih dasar dari folder data Anda. Hidden Pod akan membuat sub-direktori yang sesuai.</string>
   <string name="choose_data_directory_available_space">%1$s dari %2$s kosong</string>
   <string name="pref_pausePlaybackForFocusLoss_sum">Jeda pemutaran ulang dari pada menurunkan volume ketika aplikasi lain ingin memainkan suara</string>
   <!--Online feed view-->
@@ -509,7 +509,7 @@
   <string name="include_terms">Masukkan hanya jika episode berisikan istilah yang ditentukan di bawah</string>
   <string name="exclude_episodes_shorter_than">Kecualikan episode yang lebih pendek dari</string>
   <string name="keep_updated_summary">Sertakan podcast ini saat (otomatis) menyegarkan semua podcast</string>
-  <string name="auto_download_disabled_globally">Unduh otomatis dinonaktifkan di pengaturan AntennaPod utama</string>
+  <string name="auto_download_disabled_globally">Unduh otomatis dinonaktifkan di pengaturan Hidden Pod utama</string>
   <string name="statistics_time_played">Waktu diputar:</string>
   <string name="statistics_total_duration">Total durasi (perkiraan):</string>
   <string name="statistics_episodes_on_device">Episode yang ada di perangkat ini:</string>
@@ -538,7 +538,7 @@
   <string name="local_folder">Folder lokal</string>
   <string name="reconnect_local_folder">Hubungkan kembali folder lokal</string>
   <string name="reconnect_local_folder_warning">Jika terjadi penolakan izin, Anda dapat menggunakan ini untuk menghubungkan kembali ke folder yang sama. Jangan memilih folder yang berbeda.</string>
-  <string name="local_feed_description">Podcast virtual ini dibuat dengan menambahkan folder ke AntennaPod.</string>
+  <string name="local_feed_description">Podcast virtual ini dibuat dengan menambahkan folder ke Hidden Pod.</string>
   <string name="unable_to_start_system_file_manager">Tidak dapat memulai file manager sistem</string>
   <string name="filter">Filter</string>
   <string name="hide_is_favorite_label">Adalah favorit</string>

@@ -51,9 +51,9 @@
   <string name="home_continue_title">Dinlemeye devam et</string>
   <string name="home_new_title">Yenilikler</string>
   <string name="home_downloads_title">İndirmeleri yönet</string>
-  <string name="home_welcome_title">AntennaPod\'a hoşgeldin!</string>
+  <string name="home_welcome_title">Hidden Pod\'a hoşgeldin!</string>
   <string name="home_welcome_text">Henüz hiçbir podcast\'e abone olmadın. Kenar menüyü aç ve bir podcast ekle.</string>
-  <string name="notification_permission_text">AntennaPod bölümleri indirirken bildirimleri göstermek için izne ihtiyaç duyar.</string>
+  <string name="notification_permission_text">Hidden Pod bölümleri indirirken bildirimleri göstermek için izne ihtiyaç duyar.</string>
   <string name="notification_permission_denied">İzni reddettiniz</string>
   <string name="open_settings">Ayarları aç</string>
   <string name="configure_home">Ana Ekranı Özelleştir</string>
@@ -280,10 +280,10 @@
   <string name="download_type_feed">Besleme</string>
   <string name="download_type_media">Medya dosyası</string>
   <string name="null_value_podcast_error">Gösterilebilecek bir podcast bulunamadı</string>
-  <string name="no_feed_url_podcast_found_by_search">Önerilen Podcast\'in bir RSS bağlantısı yoktu, AntennaPod eşleşebilecek bir Podcast buldu</string>
+  <string name="no_feed_url_podcast_found_by_search">Önerilen Podcast\'in bir RSS bağlantısı yoktu, Hidden Pod eşleşebilecek bir Podcast buldu</string>
   <string name="authentication_notification_title">Yetkilendirme gerekiyor</string>
   <string name="confirm_mobile_download_dialog_title">Mobil indirmeyi onaylayın</string>
-  <string name="confirm_mobile_download_dialog_message">Mobil veri bağlantısı üzerinden indirme ayarlarda devre dışı bırakılmıştır. AntennaPod, Wi-Fi kullanılabilir olduğunda bölüm daha sonra otomatik olarak indirebilir.</string>
+  <string name="confirm_mobile_download_dialog_message">Mobil veri bağlantısı üzerinden indirme ayarlarda devre dışı bırakılmıştır. Hidden Pod, Wi-Fi kullanılabilir olduğunda bölüm daha sonra otomatik olarak indirebilir.</string>
   <string name="confirm_mobile_download_dialog_download_later">Daha sonra indir</string>
   <string name="confirm_mobile_download_dialog_allow_this_time">Yine de İndir</string>
   <string name="confirm_mobile_streaming_notification_title">Mobil akışı onaylayın</string>
@@ -298,7 +298,7 @@
   <string name="playback_error_source">Medya dosyasına ulaşılamıyor</string>
   <string name="playback_error_unknown">Bilinmeyen hata</string>
   <string name="no_media_playing_label">Çalınan medya yok</string>
-  <string name="unknown_media_key">AntennaPod - Bilinmeyen medya anahtarı: %1$d</string>
+  <string name="unknown_media_key">Hidden Pod - Bilinmeyen medya anahtarı: %1$d</string>
   <string name="error_file_not_found">Dosya bulunamadı</string>
   <string name="no_media_label">Öğe, bir medya dosyası içermiyor</string>
   <!--Queue operations-->
@@ -384,7 +384,7 @@
   <string name="downloads_pref">İndirilenler</string>
   <string name="downloads_pref_sum">Güncelleme aralığı, Mobil veri, Otomatik indirme, Otomatik silme</string>
   <string name="feed_refresh_title">Podcastleri güncelle</string>
-  <string name="feed_refresh_sum">AntennaPod\'un yeni bölümleri otomatik olarak arayacağı zaman aralığını  belirtin</string>
+  <string name="feed_refresh_sum">Hidden Pod\'un yeni bölümleri otomatik olarak arayacağı zaman aralığını  belirtin</string>
   <string name="feed_refresh_never">Hiçbir zaman</string>
   <string name="feed_every_hour">Saatte bir</string>
   <string name="feed_every_2_hours">2 saatte bir</string>
@@ -477,7 +477,7 @@
   <string name="pref_skip_silence_title">Sesteki boşlukları atla</string>
   <string name="behavior">Davranış</string>
   <string name="pref_default_page">Varsayılan sayfa</string>
-  <string name="pref_default_page_sum">AntennaPod başlatıldığında açılan ekran</string>
+  <string name="pref_default_page_sum">Hidden Pod başlatıldığında açılan ekran</string>
   <string name="pref_back_button_opens_drawer">Geri düğmesi çekmeceyi açar</string>
   <string name="pref_back_button_opens_drawer_summary">Varsayılan sayfada geri düğmesine basmak, gezinme çekmecesini açar</string>
   <string name="remember_last_page">Kaldığım hatırlat</string>
@@ -501,15 +501,15 @@
   <string name="pref_new_episodes_action_sum">Yeni bölümler için işlemler</string>
   <!--About screen-->
   <string name="about_pref">Hakkında</string>
-  <string name="antennapod_version">AntennaPod sürümü</string>
+  <string name="antennapod_version">Hidden Pod sürümü</string>
   <string name="contributors">Katkıda bulunanlar</string>
-  <string name="contributors_summary">Herkes AntennaPod\'u daha iyi hale getirmeye yardımcı olabilir - kodla, çevirilerle veya forumumuzdaki kullanıcılara yardım ederek Herkes AntennaPod\'u daha iyi hale getirmek için yardımda bulunabilir, gerek kod yazarak gerek tercüme ederek, gerekse forumda kullanıcılara yardım ederek.</string>
+  <string name="contributors_summary">Herkes Hidden Pod\'u daha iyi hale getirmeye yardımcı olabilir - kodla, çevirilerle veya forumumuzdaki kullanıcılara yardım ederek Herkes Hidden Pod\'u daha iyi hale getirmek için yardımda bulunabilir, gerek kod yazarak gerek tercüme ederek, gerekse forumda kullanıcılara yardım ederek.</string>
   <string name="developers">Geliştiriciler</string>
   <string name="translators">Tercüme edenler</string>
   <string name="special_thanks">Özel teşekkürler</string>
   <string name="privacy_policy">Gizlilik Politikası</string>
   <string name="licenses">Lisanslar</string>
-  <string name="licenses_summary">AntennaPod başka yazılımlardan da faydalanıyor</string>
+  <string name="licenses_summary">Hidden Pod başka yazılımlardan da faydalanıyor</string>
   <!--Search-->
   <string name="search_status_no_results">Sonuç bulunamadı</string>
   <string name="type_to_search">Aramak için bir kelime yazın</string>
@@ -532,8 +532,8 @@
   <string name="html_export_summary">Aboneliklerinizi bir arkadaşınıza gösterin</string>
   <string name="opml_export_summary">Aboneliklerinizi başka bir podcast uygulamasına aktarma</string>
   <string name="opml_import_summary">Aboneliklerinizi başka bir podcast uygulamasından içe aktarın</string>
-  <string name="database_export_summary">Abonelikleri, dinlenen bölümleri ve kuyruğu başka bir cihazdaki AntennaPod\'a aktarın</string>
-  <string name="database_import_summary">AntennaPod veritabanını başka bir cihazdan içe aktarma</string>
+  <string name="database_export_summary">Abonelikleri, dinlenen bölümleri ve kuyruğu başka bir cihazdaki Hidden Pod\'a aktarın</string>
+  <string name="database_import_summary">Hidden Pod veritabanını başka bir cihazdan içe aktarma</string>
   <string name="opml_import_label">OPML içe aktar</string>
   <string name="opml_add_podcast_label">Podcast listesini içe aktar (OPML)</string>
   <string name="opml_reader_error">OPML belgesini okurken bir hata oluştu:</string>
@@ -551,8 +551,8 @@
   <string name="export_success_sum">Dışa aktarılan dosya şu konuma kaydedildi:\n\n%1$s</string>
   <string name="opml_import_ask_read_permission">OPML dosyasını okumak için harici depolama alanına erişim gereklidir</string>
   <string name="successful_import_label">İçe aktarma başarılı</string>
-  <string name="import_ok">AntennaPod\'u yeniden başlatmak için lütfen OK tuşuna basın</string>
-  <string name="import_no_downgrade">Bu veritabanı AntennaPod\'un daha yeni bir sürümü ile dışa aktarıldı. Mevcut kurulumunuz henüz bu dosyayı nasıl işleyeceğini bilmiyor.</string>
+  <string name="import_ok">Hidden Pod\'u yeniden başlatmak için lütfen OK tuşuna basın</string>
+  <string name="import_no_downgrade">Bu veritabanı Hidden Pod\'un daha yeni bir sürümü ile dışa aktarıldı. Mevcut kurulumunuz henüz bu dosyayı nasıl işleyeceğini bilmiyor.</string>
   <string name="favorites_export_label">Favorileri dışa aktarma</string>
   <string name="favorites_export_summary">Kayıtlı favorileri dosyaya aktarma</string>
   <!--Sleep timer-->
@@ -587,12 +587,12 @@
   <string name="synchronization_choose_title">Senkronizasyon sağlayıcınızı seçin</string>
   <string name="synchronization_summary_unchoosen">Aboneliklerinizi ve bölüm oynatma durumunuzu senkronize etmek için birden fazla sağlayıcı arasından seçim yapabilirsiniz</string>
   <string name="dialog_choose_sync_service_title">Senkronizasyon sağlayıcınızı seçin</string>
-  <string name="gpodnet_description">Gpodder.net, kendi sunucunuza yükleyebileceğiniz açık kaynaklı bir podcast senkronizasyon hizmetidir. Gpodder.net, AntennaPod projesinden bağımsızdır.</string>
-  <string name="synchronization_summary_nextcloud">Gpoddersync, kendi sunucunuza kolayca yükleyebileceğiniz açık kaynaklı bir Nextcloud uygulamasıdır. Uygulama AntennaPod projesinden bağımsızdır.</string>
+  <string name="gpodnet_description">Gpodder.net, kendi sunucunuza yükleyebileceğiniz açık kaynaklı bir podcast senkronizasyon hizmetidir. Gpodder.net, Hidden Pod projesinden bağımsızdır.</string>
+  <string name="synchronization_summary_nextcloud">Gpoddersync, kendi sunucunuza kolayca yükleyebileceğiniz açık kaynaklı bir Nextcloud uygulamasıdır. Uygulama Hidden Pod projesinden bağımsızdır.</string>
   <string name="synchronization_host_explanation">Senkronize etmek için kendi sunucunuzu seçebilirsiniz. Tercih ettiğiniz senkronizasyon sunucusu adresini lütfen buraya girin.</string>
   <string name="synchronization_host_label">Sunucu adresi</string>
   <string name="proceed_to_login_butLabel">Oturum açmak için ilerleyin</string>
-  <string name="synchronization_nextcloud_authenticate_browser">Açılan web tarayıcısını kullanarak erişim izni verin ve AntennaPod\'a geri dönün.</string>
+  <string name="synchronization_nextcloud_authenticate_browser">Açılan web tarayıcısını kullanarak erişim izni verin ve Hidden Pod\'a geri dönün.</string>
   <string name="gpodnetauth_login_butLabel">Giriş</string>
   <string name="synchronization_credentials_explanation">Lütfen senkronizasyon sunucusundaki hesabınızın kimlik bilgilerini girin.</string>
   <string name="gpodnetauth_encryption_warning">Parola ve veri şifrelenmedi!</string>
@@ -601,10 +601,10 @@
   <string name="synchronization_login_butLabel">Giriş yap</string>
   <string name="synchronization_selectDevice_explanation">Lütfen senkronizasyon sunucusunda oluşturduğunuz cihazı seçin veya yenisini oluşturun.</string>
   <string name="gpodnetauth_device_name">Cihaz ismi</string>
-  <string name="gpodnetauth_device_name_default">AntennaPod\'da %1$s</string>
+  <string name="gpodnetauth_device_name_default">Hidden Pod\'da %1$s</string>
   <string name="gpodnetauth_existing_devices">Mevcut cihazlar</string>
   <string name="gpodnetauth_create_device">Cihaz oluştur</string>
-  <string name="gpodnetauth_finish_descr">Tebrikler! gpodder.net hesabınız cihazınızla ilişkilendirildi. AntennaPod bundan sonra gpodder.net hesabınızla üyeliklerinizi otomatik olarak senkronize edecek.</string>
+  <string name="gpodnetauth_finish_descr">Tebrikler! gpodder.net hesabınız cihazınızla ilişkilendirildi. Hidden Pod bundan sonra gpodder.net hesabınızla üyeliklerinizi otomatik olarak senkronize edecek.</string>
   <string name="gpodnetauth_finish_butsyncnow">Senkronizasyonu başlat</string>
   <string name="pref_gpodnet_setlogin_information_title">Giriş bilgisini değiştir</string>
   <string name="pref_gpodnet_setlogin_information_sum">gpodder.net hesabınız için giriş bilgisini değiştirin.</string>
@@ -622,7 +622,7 @@
   <string name="gpodnetsync_username_characters_error">Usernames may only contain letters, digits, hyphens and underscores.</string>
   <!--Directory chooser-->
   <string name="choose_data_directory">Veri klasörünü seçin</string>
-  <string name="choose_data_directory_message">Lütfen verileriniz için ana klasörü seçin. AntennaPod gerekli alt-klasörleri oluşturacaktır.</string>
+  <string name="choose_data_directory_message">Lütfen verileriniz için ana klasörü seçin. Hidden Pod gerekli alt-klasörleri oluşturacaktır.</string>
   <string name="choose_data_directory_available_space">%1$s of %2$s free</string>
   <string name="pref_pausePlaybackForFocusLoss_sum">Başka bir uygulama ses çalmak istediğinde sesi kısmak yerine yürütmeyi duraklat</string>
   <string name="pref_pausePlaybackForFocusLoss_title">Kesintiler için duraklat</string>
@@ -664,7 +664,7 @@
   <string name="exclude_episodes_shorter_than">Şundan kısa bölümleri hariç tut</string>
   <string name="keep_updated">Güncel tutun</string>
   <string name="keep_updated_summary">Tüm podcastleri (otomatik veya elle) yenilerken bu podcasti dahil et</string>
-  <string name="auto_download_disabled_globally">AntennaPod ayarlarında otomatik indirme devre dışı bırakılmıştır</string>
+  <string name="auto_download_disabled_globally">Hidden Pod ayarlarında otomatik indirme devre dışı bırakılmıştır</string>
   <string name="statistics_time_played">Çalınan süre:</string>
   <string name="statistics_total_duration">Toplam süre (tahmini):</string>
   <string name="statistics_episodes_on_device">Cihazdaki bölüm sayısı:</string>

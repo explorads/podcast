@@ -51,9 +51,9 @@
   <string name="home_continue_title">Forsett å høre</string>
   <string name="home_new_title">Se hva som er nytt</string>
   <string name="home_downloads_title">Forvalte nedlastninger</string>
-  <string name="home_welcome_title">Velkommen til AntennaPod!</string>
+  <string name="home_welcome_title">Velkommen til Hidden Pod!</string>
   <string name="home_welcome_text">Du har ikke abonnert noen podcaster enda. Åpne menuen til side for å legge til en podcast.</string>
-  <string name="notification_permission_text">AntennaPod trenger tillatelser for å vise beskjeder mens det nedlastes episoder.</string>
+  <string name="notification_permission_text">Hidden Pod trenger tillatelser for å vise beskjeder mens det nedlastes episoder.</string>
   <string name="notification_permission_denied">Du avslå tillatelsen.</string>
   <string name="open_settings">Åpne innstillinger</string>
   <string name="configure_home">Konfigurer hjemmeskjermen</string>
@@ -272,10 +272,10 @@
   <string name="download_type_feed">Strøm</string>
   <string name="download_type_media">Mediafil</string>
   <string name="null_value_podcast_error">Ingen podkast ble gitt som kunne vises.</string>
-  <string name="no_feed_url_podcast_found_by_search">Foreslått podcast hadde ingen RSS link, AntennaPod fant en podcast som kunne passe.</string>
+  <string name="no_feed_url_podcast_found_by_search">Foreslått podcast hadde ingen RSS link, Hidden Pod fant en podcast som kunne passe.</string>
   <string name="authentication_notification_title">Autentisering påkreves</string>
   <string name="confirm_mobile_download_dialog_title">Bekreft nedlasting over mobildata</string>
-  <string name="confirm_mobile_download_dialog_message">Nedlasting via mobildata har blitt slått av i innstillingene. AntennaPod kan nedlaste episoden automatisk senere, når trådløst nettet er tilgjengelig.</string>
+  <string name="confirm_mobile_download_dialog_message">Nedlasting via mobildata har blitt slått av i innstillingene. Hidden Pod kan nedlaste episoden automatisk senere, når trådløst nettet er tilgjengelig.</string>
   <string name="confirm_mobile_download_dialog_download_later">Last ned senere</string>
   <string name="confirm_mobile_download_dialog_allow_this_time">Last ned uansett</string>
   <string name="confirm_mobile_streaming_notification_title">Bekreft strømming via mobildata</string>
@@ -289,7 +289,7 @@
   <string name="playback_error_source">Kunne ikke hente media-fil</string>
   <string name="playback_error_unknown">Ukjent feil</string>
   <string name="no_media_playing_label">Ingen media spillende for øyeblikket.</string>
-  <string name="unknown_media_key">AntennaPod - Ukjent medienøkkel: %1$d</string>
+  <string name="unknown_media_key">Hidden Pod - Ukjent medienøkkel: %1$d</string>
   <string name="error_file_not_found">Fil ikke funnet</string>
   <string name="no_media_label">Element inneholder ingen media fil</string>
   <!--Queue operations-->
@@ -468,7 +468,7 @@
   <string name="pref_skip_silence_title">Hopp over stillhet</string>
   <string name="behavior">Oppførsel</string>
   <string name="pref_default_page">Standard side</string>
-  <string name="pref_default_page_sum">Skjerm som åpnes først nå AntennaPod åpnes.</string>
+  <string name="pref_default_page_sum">Skjerm som åpnes først nå Hidden Pod åpnes.</string>
   <string name="pref_back_button_opens_drawer">Tilbake knappen åpner skuffen</string>
   <string name="pref_back_button_opens_drawer_summary">Å trykke tilbake knappen på standard siden åpner navigasjons skuffen</string>
   <string name="remember_last_page">Husk siste side</string>
@@ -492,15 +492,15 @@
   <string name="pref_new_episodes_action_sum">Aksjon som utføres for nye episoder</string>
   <!--About screen-->
   <string name="about_pref">Om</string>
-  <string name="antennapod_version">AntennaPod versjon</string>
+  <string name="antennapod_version">Hidden Pod versjon</string>
   <string name="contributors">Bidragsytere</string>
-  <string name="contributors_summary">Alle kan hjelpe med å forbedre AntennaPod - med kode, oversettinger eller med å hjelpe bruker i vår forum</string>
+  <string name="contributors_summary">Alle kan hjelpe med å forbedre Hidden Pod - med kode, oversettinger eller med å hjelpe bruker i vår forum</string>
   <string name="developers">Utviklere</string>
   <string name="translators">Oversettere</string>
   <string name="special_thanks">Spesiell takk til</string>
   <string name="privacy_policy">Personvern</string>
   <string name="licenses">Lisenser</string>
-  <string name="licenses_summary">AntennaPod bruker annen flott programvare</string>
+  <string name="licenses_summary">Hidden Pod bruker annen flott programvare</string>
   <!--Search-->
   <string name="search_status_no_results">Ingen resultater ble funnet</string>
   <string name="type_to_search">Begynn å tast inn noe for å lete</string>
@@ -523,8 +523,8 @@
   <string name="html_export_summary">Vis abonnementene dine til en venn</string>
   <string name="opml_export_summary">Overfør abonnementene dine til en annen podkast-app</string>
   <string name="opml_import_summary">Importer abonnementene dine fra en annen podkast-app</string>
-  <string name="database_export_summary">Overfør abonnementer, avspilte episoder og kø til AntennaPod på en annen enhet</string>
-  <string name="database_import_summary">Importer AntennaPod-database fra en annen enhet</string>
+  <string name="database_export_summary">Overfør abonnementer, avspilte episoder og kø til Hidden Pod på en annen enhet</string>
+  <string name="database_import_summary">Importer Hidden Pod-database fra en annen enhet</string>
   <string name="opml_import_label">OPML-import</string>
   <string name="opml_add_podcast_label">Importere podkast listen (OPML)</string>
   <string name="opml_reader_error">En feil oppstod ved lesing av OPML dokument: </string>
@@ -542,8 +542,8 @@
   <string name="export_success_sum">Den eksporterte filen ble skrevet til:\n\n%1$s</string>
   <string name="opml_import_ask_read_permission">Tilgang til ekstern lagring er nødvendig for å lese OPML filen</string>
   <string name="successful_import_label">Eksportering vellykket</string>
-  <string name="import_ok">Trykk OK for å starte AntennaPod på nytt</string>
-  <string name="import_no_downgrade">Denne databasen ble eksportert fra en nyere versjon av AntennaPod. Din versjon av AntennaPod kan ikke lese denne filen enda.</string>
+  <string name="import_ok">Trykk OK for å starte Hidden Pod på nytt</string>
+  <string name="import_no_downgrade">Denne databasen ble eksportert fra en nyere versjon av Hidden Pod. Din versjon av Hidden Pod kan ikke lese denne filen enda.</string>
   <string name="favorites_export_label">Favoritt eksportering</string>
   <string name="favorites_export_summary">Eksporter lagret favoritter til en fil</string>
   <!--Sleep timer-->
@@ -578,12 +578,12 @@
   <string name="synchronization_choose_title">Velg synkroniserings-provider</string>
   <string name="synchronization_summary_unchoosen">Du kan velge mellom forskjellige provider til å synkronisere abonnementene dine og avspillings-status av episoden</string>
   <string name="dialog_choose_sync_service_title">Velg synkroniserings-provider</string>
-  <string name="gpodnet_description">Gpodder.net er an open-kildekodet podkast synkroniserings tjeneste som du kan installere på en egen server. Gpodder.net er uavhengig av AntennaPod prosjektet.</string>
-  <string name="synchronization_summary_nextcloud">Gpoddersync er en åpen-kildekode app i Nextcloud som du enkelt kan installere på din egen tjener. Appen er uavhengig av AntennaPod prosjektet.</string>
+  <string name="gpodnet_description">Gpodder.net er an open-kildekodet podkast synkroniserings tjeneste som du kan installere på en egen server. Gpodder.net er uavhengig av Hidden Pod prosjektet.</string>
+  <string name="synchronization_summary_nextcloud">Gpoddersync er en åpen-kildekode app i Nextcloud som du enkelt kan installere på din egen tjener. Appen er uavhengig av Hidden Pod prosjektet.</string>
   <string name="synchronization_host_explanation">Du kan velge din egen server for å synkronisere med. Når du har valgt ditt favoritt server, legg til adressen her.</string>
   <string name="synchronization_host_label">Server adressen</string>
   <string name="proceed_to_login_butLabel">Forsett til login</string>
-  <string name="synchronization_nextcloud_authenticate_browser">Gir tilgang med åpnet nettleseren og kommer tilbake inni AntennaPod.</string>
+  <string name="synchronization_nextcloud_authenticate_browser">Gir tilgang med åpnet nettleseren og kommer tilbake inni Hidden Pod.</string>
   <string name="gpodnetauth_login_butLabel">Logg inn</string>
   <string name="synchronization_credentials_explanation">Vennligst legg til påloggingsinformasjoner av kontoen din på synkroniserings-serveren.</string>
   <string name="gpodnetauth_encryption_warning">Passord og data er ikke kryptert!</string>
@@ -592,10 +592,10 @@
   <string name="synchronization_login_butLabel">Log in</string>
   <string name="synchronization_selectDevice_explanation">Vennligst velg enheten du la til på synkroniserings serveren eller lage en ny enhet.</string>
   <string name="gpodnetauth_device_name">Enhetens navn</string>
-  <string name="gpodnetauth_device_name_default">AntennaPod på %1$s</string>
+  <string name="gpodnetauth_device_name_default">Hidden Pod på %1$s</string>
   <string name="gpodnetauth_existing_devices">Eksisterende enheter</string>
   <string name="gpodnetauth_create_device">Lage en ny enhet</string>
-  <string name="gpodnetauth_finish_descr">Gratulerer! Din gpodder.net konto er nå linket opp med din enhet. AntennaPod vil nå automatisk synkronisere abonnementer på din enhet med din gpodder.net konto.</string>
+  <string name="gpodnetauth_finish_descr">Gratulerer! Din gpodder.net konto er nå linket opp med din enhet. Hidden Pod vil nå automatisk synkronisere abonnementer på din enhet med din gpodder.net konto.</string>
   <string name="gpodnetauth_finish_butsyncnow">Start synkronisering nå.</string>
   <string name="pref_gpodnet_setlogin_information_title">Endre innloggingsinformasjon</string>
   <string name="pref_gpodnet_setlogin_information_sum">Endre innlogginsinformasjonen til din gpodder.net konto</string>
@@ -613,7 +613,7 @@
   <string name="gpodnetsync_username_characters_error">Brukernavn kan kun inneholde bokstaber, tall, bindestrek og understrek</string>
   <!--Directory chooser-->
   <string name="choose_data_directory">Velg datamappe</string>
-  <string name="choose_data_directory_message">Vennligst velg plasseringa til datamappa di. AntennaPod vil lage de nødvendige undermappene.</string>
+  <string name="choose_data_directory_message">Vennligst velg plasseringa til datamappa di. Hidden Pod vil lage de nødvendige undermappene.</string>
   <string name="choose_data_directory_available_space">%1$s av %2$s ledig</string>
   <string name="pref_pausePlaybackForFocusLoss_sum">Sett avspilling på pause istedenfor å skru ned volumet når en annen app vil spille av lyder</string>
   <string name="pref_pausePlaybackForFocusLoss_title">Pause for forstyrrelser</string>
@@ -655,7 +655,7 @@
   <string name="exclude_episodes_shorter_than">Ekskludere episoder kortere enn</string>
   <string name="keep_updated">Hold oppdatert</string>
   <string name="keep_updated_summary">Inkluder denne podkasten når alle podkaster oppdateres</string>
-  <string name="auto_download_disabled_globally">Automatisk nedlasting er deaktivert i AntennaPod-innstillingene</string>
+  <string name="auto_download_disabled_globally">Automatisk nedlasting er deaktivert i Hidden Pod-innstillingene</string>
   <string name="statistics_time_played">Avspillingstid:</string>
   <string name="statistics_total_duration">Total lengde (estimert):</string>
   <string name="statistics_episodes_on_device">Episoder på enhenten:</string>
@@ -687,7 +687,7 @@
   <string name="local_folder">Lokale mappe</string>
   <string name="reconnect_local_folder">Tilkoble lokal mappe igjen</string>
   <string name="reconnect_local_folder_warning">Hvis rettighetene er ikke godkjent, så kan du bruke denne tilkoblingen til akkurat samme mappen. Ikke velg en annen mappe.</string>
-  <string name="local_feed_description">Denne virtuelle podkasten ble laget ved å legge en mappe til i AntennaPod.</string>
+  <string name="local_feed_description">Denne virtuelle podkasten ble laget ved å legge en mappe til i Hidden Pod.</string>
   <string name="unable_to_start_system_file_manager">Kan ikke start systemets fil eksplorer.</string>
   <string name="filter">Filter</string>
   <string name="hide_is_favorite_label">Er favoritt</string>

@@ -51,9 +51,9 @@
   <string name="home_continue_title">Continua ad ascoltare</string>
   <string name="home_new_title">Vedi cosa c\'è di nuovo</string>
   <string name="home_downloads_title">Gestisci i download</string>
-  <string name="home_welcome_title">Benvenuti su AntennaPod!</string>
+  <string name="home_welcome_title">Benvenuti su Hidden Pod!</string>
   <string name="home_welcome_text">Non sei iscritto a nessun podcast. Apri il menù laterale per aggiungerne uno.</string>
-  <string name="notification_permission_text">AntennaPod richiede la tua autorizzazione per mostrare notifiche durante il download degli episodi.</string>
+  <string name="notification_permission_text">Hidden Pod richiede la tua autorizzazione per mostrare notifiche durante il download degli episodi.</string>
   <string name="notification_permission_denied">Hai negato l\'autorizzazione.</string>
   <string name="open_settings">Apri Impostazioni</string>
   <string name="configure_home">Configura la schermata Home</string>
@@ -295,10 +295,10 @@
   <string name="download_type_feed">Feed</string>
   <string name="download_type_media">File multimediali</string>
   <string name="null_value_podcast_error">Nessun è stato fornito alcun podcast che possa essere mostrato.</string>
-  <string name="no_feed_url_podcast_found_by_search">Il podcast suggerito non ha un link RSS, AntennaPod ha trovato un podcast che potrebbe corrispondere</string>
+  <string name="no_feed_url_podcast_found_by_search">Il podcast suggerito non ha un link RSS, Hidden Pod ha trovato un podcast che potrebbe corrispondere</string>
   <string name="authentication_notification_title">Autenticazione richiesta</string>
   <string name="confirm_mobile_download_dialog_title">Conferma download su rete mobile</string>
-  <string name="confirm_mobile_download_dialog_message">Il download su rete mobile è disabilitato nelle impostazioni. AntennaPod può scaricare l\'espisodio più tardi, quando il Wi-Fi sarà disponibile.</string>
+  <string name="confirm_mobile_download_dialog_message">Il download su rete mobile è disabilitato nelle impostazioni. Hidden Pod può scaricare l\'espisodio più tardi, quando il Wi-Fi sarà disponibile.</string>
   <string name="confirm_mobile_download_dialog_download_later">Scarica più tardi</string>
   <string name="confirm_mobile_download_dialog_allow_this_time">Scarica comunque</string>
   <string name="confirm_mobile_streaming_notification_title">Conferma streaming su rete mobile</string>
@@ -313,7 +313,7 @@
   <string name="playback_error_source">Impossibile accedere al file</string>
   <string name="playback_error_unknown">Errore sconosciuto</string>
   <string name="no_media_playing_label">Nessun elemento multimediale in riproduzione</string>
-  <string name="unknown_media_key">AntennaPod - Chiave dell\'elemento multimediale sconosciuta: %1$d</string>
+  <string name="unknown_media_key">Hidden Pod - Chiave dell\'elemento multimediale sconosciuta: %1$d</string>
   <string name="error_file_not_found">File non trovato</string>
   <string name="no_media_label">L\'oggetto non contiene un file multimediale</string>
   <!--Queue operations-->
@@ -492,7 +492,7 @@
   <string name="pref_skip_silence_title">Salta il silenzio audio</string>
   <string name="behavior">Comportamento</string>
   <string name="pref_default_page">Pagina predefinita</string>
-  <string name="pref_default_page_sum">La schermata da aprire quando avvii AntennaPod</string>
+  <string name="pref_default_page_sum">La schermata da aprire quando avvii Hidden Pod</string>
   <string name="pref_back_button_opens_drawer">Tasto Indietro apre il menù</string>
   <string name="pref_back_button_opens_drawer_summary">Premendo il tasto indietro nella pagina predefinita viene aperto il menù di navigazione</string>
   <string name="remember_last_page">Riapri l\'ultima pagina</string>
@@ -516,15 +516,15 @@
   <string name="pref_new_episodes_action_sum">Azioni da svolgere sui nuovi episodi</string>
   <!--About screen-->
   <string name="about_pref">Informazioni</string>
-  <string name="antennapod_version">Versione di AntennaPod</string>
+  <string name="antennapod_version">Versione di Hidden Pod</string>
   <string name="contributors">Contributori</string>
-  <string name="contributors_summary">Tutti possono contribuire a rendere AntennaPod migliore - programmando, traducendo o aiutando gli utenti nel nostro forum</string>
+  <string name="contributors_summary">Tutti possono contribuire a rendere Hidden Pod migliore - programmando, traducendo o aiutando gli utenti nel nostro forum</string>
   <string name="developers">Sviluppatori</string>
   <string name="translators">Traduttori</string>
   <string name="special_thanks">Ringraziamenti speciali</string>
   <string name="privacy_policy">Privacy policy</string>
   <string name="licenses">Licenze</string>
-  <string name="licenses_summary">AntennaPod usa altri ottimi software</string>
+  <string name="licenses_summary">Hidden Pod usa altri ottimi software</string>
   <!--Search-->
   <string name="search_status_no_results">Nessun risultato trovato</string>
   <string name="type_to_search">Digita una ricerca da eseguire</string>
@@ -547,8 +547,8 @@
   <string name="html_export_summary">Mostra le tue iscrizioni ad un amico</string>
   <string name="opml_export_summary">Sposta le tue iscrizioni in un\'altra app per i podcast</string>
   <string name="opml_import_summary">Importa le tue iscrizioni da un\'altra app per i podcast</string>
-  <string name="database_export_summary">Sposta le iscrizioni, gli episodi ascoltati e la coda su AntennaPod di un altro dispositivo</string>
-  <string name="database_import_summary">Importa il database di AntennaPod da un altro dispositivo</string>
+  <string name="database_export_summary">Sposta le iscrizioni, gli episodi ascoltati e la coda su Hidden Pod di un altro dispositivo</string>
+  <string name="database_import_summary">Importa il database di Hidden Pod da un altro dispositivo</string>
   <string name="opml_import_label">Importa da OPML</string>
   <string name="opml_add_podcast_label">Importa lista podcast (OPML)</string>
   <string name="opml_reader_error">Errore in fase di lettura del documento OPML:</string>
@@ -566,8 +566,8 @@
   <string name="export_success_sum">Il file esportato è stato salvato in:\n\n%1$s</string>
   <string name="opml_import_ask_read_permission">E\' richiesto l\'accesso alla memoria esterna per leggere il file OPML</string>
   <string name="successful_import_label">Importazione eseguita</string>
-  <string name="import_ok">Premi OK per riavviare AntennaPod</string>
-  <string name="import_no_downgrade">Questo database è stato esportato da una versione più recente di AntennaPod. La tua applicazione attuale non sa ancora come gestire questo file.</string>
+  <string name="import_ok">Premi OK per riavviare Hidden Pod</string>
+  <string name="import_no_downgrade">Questo database è stato esportato da una versione più recente di Hidden Pod. La tua applicazione attuale non sa ancora come gestire questo file.</string>
   <string name="favorites_export_label">Esporta preferiti</string>
   <string name="favorites_export_summary">Esporta preferiti su file</string>
   <!--Sleep timer-->
@@ -605,12 +605,12 @@
   <string name="synchronization_choose_title">Scegli provider di sincronizzazione</string>
   <string name="synchronization_summary_unchoosen">Puoi selezionare diversi fornitori per la sincronizzazione delle iscrizioni e dello stato degli episodi con</string>
   <string name="dialog_choose_sync_service_title">Scegli provider di sincronizzazione</string>
-  <string name="gpodnet_description">Gpodder.net è un servizio di sincronizzazione podcast che puoi installare sul tuo server. Gpodder.net è indipendente dal progetto AntennaPod.</string>
-  <string name="synchronization_summary_nextcloud">Gpoddersync è un\'app open-source per Nextcloud che puoi facilmente installare sul tuo server. L\'app è indipendente dal progetto AntennaPod.</string>
+  <string name="gpodnet_description">Gpodder.net è un servizio di sincronizzazione podcast che puoi installare sul tuo server. Gpodder.net è indipendente dal progetto Hidden Pod.</string>
+  <string name="synchronization_summary_nextcloud">Gpoddersync è un\'app open-source per Nextcloud che puoi facilmente installare sul tuo server. L\'app è indipendente dal progetto Hidden Pod.</string>
   <string name="synchronization_host_explanation">Puoi scegliere un server personale per la sincronizzazione. Quando hai  trovato il server più adatto inserisci qui l\'indirizzo.</string>
   <string name="synchronization_host_label">Indirizzo server</string>
   <string name="proceed_to_login_butLabel">Effettua l\'accesso</string>
-  <string name="synchronization_nextcloud_authenticate_browser">Permetti l\'accesso dalla finestra del browser aperta e ritorna ad AntennaPod.</string>
+  <string name="synchronization_nextcloud_authenticate_browser">Permetti l\'accesso dalla finestra del browser aperta e ritorna ad Hidden Pod.</string>
   <string name="gpodnetauth_login_butLabel">Login</string>
   <string name="synchronization_credentials_explanation">Inserisci le tue credenziali di accesso al server di sincronizzazione.</string>
   <string name="gpodnetauth_encryption_warning">Dati e password non cifrati!</string>
@@ -619,10 +619,10 @@
   <string name="synchronization_login_butLabel">Accedi</string>
   <string name="synchronization_selectDevice_explanation">Seleziona il dispositivo esistente sul server di sincronizzazione o creane uno nuovo.</string>
   <string name="gpodnetauth_device_name">Nome dispositivo</string>
-  <string name="gpodnetauth_device_name_default">AntennaPod su %1$s</string>
+  <string name="gpodnetauth_device_name_default">Hidden Pod su %1$s</string>
   <string name="gpodnetauth_existing_devices">Dispositivi esistenti</string>
   <string name="gpodnetauth_create_device">Crea dispositivo</string>
-  <string name="gpodnetauth_finish_descr">Congraturazioni! Il tuo account gpodder.net è stato collegato con il dispositivo. Ora AntennaPod sincronizzerà automaticamente le sottoscrizioni sul dispositivo con il tuo account gpodder.net.</string>
+  <string name="gpodnetauth_finish_descr">Congraturazioni! Il tuo account gpodder.net è stato collegato con il dispositivo. Ora Hidden Pod sincronizzerà automaticamente le sottoscrizioni sul dispositivo con il tuo account gpodder.net.</string>
   <string name="gpodnetauth_finish_butsyncnow">Avvia la sincronizzazione</string>
   <string name="pref_gpodnet_setlogin_information_title">Cambia le informazioni di login</string>
   <string name="pref_gpodnet_setlogin_information_sum">Cambia le informazioni di login per il tuo account gpodder.net.</string>
@@ -640,7 +640,7 @@
   <string name="gpodnetsync_username_characters_error">Il nome utente può contenere solo lettere, numeri e trattini alti o bassi.</string>
   <!--Directory chooser-->
   <string name="choose_data_directory">Scegli la cartella per i dati</string>
-  <string name="choose_data_directory_message">Scegli dove salvare la tua cartella dati. AntennaPod creerà le sottocartelle appropriate.</string>
+  <string name="choose_data_directory_message">Scegli dove salvare la tua cartella dati. Hidden Pod creerà le sottocartelle appropriate.</string>
   <string name="choose_data_directory_available_space">%1$s di %2$s liberi</string>
   <string name="pref_pausePlaybackForFocusLoss_sum">Quando un\'altra app emette un suono, sospendi la riproduzione invece di abbassare il volume</string>
   <string name="pref_pausePlaybackForFocusLoss_title">Pausa su interruzione</string>
@@ -714,7 +714,7 @@
   <string name="local_folder">Cartella locale</string>
   <string name="reconnect_local_folder">Riconnetti cartella locale</string>
   <string name="reconnect_local_folder_warning">In caso di rifiuto dell\'autorizzazione, puoi usare questa opzione per riconnetterti alla stessa cartella. Non selezionare un\'altra cartella.</string>
-  <string name="local_feed_description">Questo podcast virtuale è stato generato aggiungendo una cartella locale ad AntennaPod</string>
+  <string name="local_feed_description">Questo podcast virtuale è stato generato aggiungendo una cartella locale ad Hidden Pod</string>
   <string name="unable_to_start_system_file_manager">Impossibile avviare il gestore file di sistema</string>
   <string name="filter">Filtra</string>
   <string name="hide_is_favorite_label">Preferiti</string>

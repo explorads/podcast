@@ -51,9 +51,9 @@
   <string name="home_continue_title">继续收听</string>
   <string name="home_new_title">最近更新</string>
   <string name="home_downloads_title">管理下载</string>
-  <string name="home_welcome_title">欢迎来到 AntennaPod！</string>
+  <string name="home_welcome_title">欢迎来到 Hidden Pod！</string>
   <string name="home_welcome_text">你尚未订阅任何播客。 打开侧栏菜单添加一个。</string>
-  <string name="notification_permission_text">AntennaPod 需要你的许可才能在下载节目时显示通知</string>
+  <string name="notification_permission_text">Hidden Pod 需要你的许可才能在下载节目时显示通知</string>
   <string name="notification_permission_denied">你拒绝授予该权限</string>
   <string name="open_settings">打开设置</string>
   <string name="configure_home">配置主屏幕</string>
@@ -265,10 +265,10 @@
   <string name="download_type_feed">订阅</string>
   <string name="download_type_media">媒体文件</string>
   <string name="null_value_podcast_error">没有可供显示的播客。</string>
-  <string name="no_feed_url_podcast_found_by_search">推荐的播客没有 RSS 链接，AntennaPod 找到了一个可以匹配的播客</string>
+  <string name="no_feed_url_podcast_found_by_search">推荐的播客没有 RSS 链接，Hidden Pod 找到了一个可以匹配的播客</string>
   <string name="authentication_notification_title">需要认证</string>
   <string name="confirm_mobile_download_dialog_title">确认使用移动数据下载</string>
-  <string name="confirm_mobile_download_dialog_message">设置中禁用了使用移动数据进行下载。当 Wi-Fi 可用时，AntennaPod 可以稍后自动下载节目。</string>
+  <string name="confirm_mobile_download_dialog_message">设置中禁用了使用移动数据进行下载。当 Wi-Fi 可用时，Hidden Pod 可以稍后自动下载节目。</string>
   <string name="confirm_mobile_download_dialog_download_later">稍后下载</string>
   <string name="confirm_mobile_download_dialog_allow_this_time">仍要下载</string>
   <string name="confirm_mobile_streaming_notification_title">确认使用移动数据进行在线播放</string>
@@ -283,7 +283,7 @@
   <string name="playback_error_source">无法访问媒体文件</string>
   <string name="playback_error_unknown">未知错误</string>
   <string name="no_media_playing_label">没有可播放的媒体</string>
-  <string name="unknown_media_key">AntennaPod - 未知媒体密钥: %1$d</string>
+  <string name="unknown_media_key">Hidden Pod - 未知媒体密钥: %1$d</string>
   <string name="error_file_not_found">文件未找到</string>
   <string name="no_media_label">条目不包含一个媒体文件</string>
   <!--Queue operations-->
@@ -369,7 +369,7 @@
   <string name="downloads_pref">下载</string>
   <string name="downloads_pref_sum">更新间隔、移动数据、自动下载、自动删除</string>
   <string name="feed_refresh_title">刷新播客</string>
-  <string name="feed_refresh_sum">指定 AntennaPod 自动查找新节目的间隔</string>
+  <string name="feed_refresh_sum">指定 Hidden Pod 自动查找新节目的间隔</string>
   <string name="feed_refresh_never">永不</string>
   <string name="feed_every_hour">每 1 小时</string>
   <string name="feed_every_2_hours">每 2 小时</string>
@@ -463,7 +463,7 @@
   <string name="pref_skip_silence_title">跳过静音部分</string>
   <string name="behavior">行为</string>
   <string name="pref_default_page">默认页</string>
-  <string name="pref_default_page_sum">启动 AntennaPod 时打开的屏幕。</string>
+  <string name="pref_default_page_sum">启动 Hidden Pod 时打开的屏幕。</string>
   <string name="pref_back_button_opens_drawer">返回按钮打开抽屉</string>
   <string name="pref_back_button_opens_drawer_summary">在默认页面上按下返回按钮打开导航抽屉</string>
   <string name="remember_last_page">记住最后的页面</string>
@@ -570,12 +570,12 @@
   <string name="synchronization_choose_title">选择同步供应商</string>
   <string name="synchronization_summary_unchoosen">您可以从多个提供商中选择一个用来同步您的订阅和节目播放状态</string>
   <string name="dialog_choose_sync_service_title">选择同步提供商</string>
-  <string name="gpodnet_description">Gpodder.net 是一个开源的播客同步服务，你可以将其安装在自己的服务器上。Gpodder.net 独立于 AntennaPod 项目。</string>
-  <string name="synchronization_summary_nextcloud">Gpoddersync 是一个开源的 Nextcloud 应用程序，你可以很容易地安装在自己的服务器上。该应用程序独立于 AntennaPod 项目。</string>
+  <string name="gpodnet_description">Gpodder.net 是一个开源的播客同步服务，你可以将其安装在自己的服务器上。Gpodder.net 独立于 Hidden Pod 项目。</string>
+  <string name="synchronization_summary_nextcloud">Gpoddersync 是一个开源的 Nextcloud 应用程序，你可以很容易地安装在自己的服务器上。该应用程序独立于 Hidden Pod 项目。</string>
   <string name="synchronization_host_explanation">你可以选择用自己的服务器进行同步。当你确定了偏好的同步服务器，请在此处输入其地址</string>
   <string name="synchronization_host_label">服务器地址</string>
   <string name="proceed_to_login_butLabel">继续登录</string>
-  <string name="synchronization_nextcloud_authenticate_browser">使用打开的网页浏览器授予访问权限，然后返回到 AntennaPod。</string>
+  <string name="synchronization_nextcloud_authenticate_browser">使用打开的网页浏览器授予访问权限，然后返回到 Hidden Pod。</string>
   <string name="gpodnetauth_login_butLabel">登录</string>
   <string name="synchronization_credentials_explanation">请提供该同步服务器上你账户的凭据</string>
   <string name="gpodnetauth_encryption_warning">密码和数据没有加密！</string>
@@ -584,10 +584,10 @@
   <string name="synchronization_login_butLabel">登录</string>
   <string name="synchronization_selectDevice_explanation">请选择你在同步服务器上创建的设备或新建一个</string>
   <string name="gpodnetauth_device_name">设备名</string>
-  <string name="gpodnetauth_device_name_default">AntennaPod 于 %1$s</string>
+  <string name="gpodnetauth_device_name_default">Hidden Pod 于 %1$s</string>
   <string name="gpodnetauth_existing_devices">现有设备</string>
   <string name="gpodnetauth_create_device">创建设备</string>
-  <string name="gpodnetauth_finish_descr">恭喜! 你的 gpodder.net 帐户与设备已连结完成.  现在开始 AntennaPod 将自动同步你 gpodder.net 帐户内的订阅信息到设备上.</string>
+  <string name="gpodnetauth_finish_descr">恭喜! 你的 gpodder.net 帐户与设备已连结完成.  现在开始 Hidden Pod 将自动同步你 gpodder.net 帐户内的订阅信息到设备上.</string>
   <string name="gpodnetauth_finish_butsyncnow">开始同步</string>
   <string name="pref_gpodnet_setlogin_information_title">改变登录信息</string>
   <string name="pref_gpodnet_setlogin_information_sum">改变 gpodder.net 账户登录信息.</string>
@@ -605,7 +605,7 @@
   <string name="gpodnetsync_username_characters_error">用户名只能包含字母、数字、连字符和下划线</string>
   <!--Directory chooser-->
   <string name="choose_data_directory">选择数据文件夹</string>
-  <string name="choose_data_directory_message">请选择用于 AntennaPod 的数据根目录， AntennaPod 将会创建合适的子目录。</string>
+  <string name="choose_data_directory_message">请选择用于 Hidden Pod 的数据根目录， Hidden Pod 将会创建合适的子目录。</string>
   <string name="choose_data_directory_available_space">%2$s中%1$s可用</string>
   <string name="pref_pausePlaybackForFocusLoss_sum">当另一个应用程序要播放声音时暂停播放, 而不是降低音量</string>
   <string name="pref_pausePlaybackForFocusLoss_title">中断暂停</string>

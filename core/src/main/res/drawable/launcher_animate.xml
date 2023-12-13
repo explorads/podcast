@@ -7,7 +7,8 @@
     <item android:duration="1000">
         <aapt:attr name="android:drawable">
             <layer-list>
-                <item android:drawable="@drawable/launcher_animate_bg" />
+<!--                <item android:drawable="@drawable/launcher_animate_bg" />-->
+                <item android:drawable="@drawable/launcher_animate_bg_" />
                 <item android:drawable="@drawable/launcher_animate_wave1" />
                 <item android:drawable="@drawable/launcher_animate_wave2" />
             </layer-list>
@@ -17,7 +18,8 @@
     <item android:duration="80">
         <aapt:attr name="android:drawable">
             <layer-list>
-                <item android:drawable="@drawable/launcher_animate_bg" />
+<!--                <item android:drawable="@drawable/launcher_animate_bg" />-->
+                <item android:drawable="@drawable/launcher_animate_bg_" />
                 <item android:drawable="@drawable/launcher_animate_wave1" />
             </layer-list>
         </aapt:attr>
@@ -26,7 +28,8 @@
     <item android:duration="200">
         <aapt:attr name="android:drawable">
             <layer-list>
-                <item android:drawable="@drawable/launcher_animate_bg" />
+<!--                <item android:drawable="@drawable/launcher_animate_bg" />-->
+                <item android:drawable="@drawable/launcher_animate_bg_" />
             </layer-list>
         </aapt:attr>
     </item>
@@ -34,7 +37,8 @@
     <item android:duration="80">
         <aapt:attr name="android:drawable">
             <layer-list>
-                <item android:drawable="@drawable/launcher_animate_bg" />
+<!--                <item android:drawable="@drawable/launcher_animate_bg" />-->
+                <item android:drawable="@drawable/launcher_animate_bg_" />
                 <item android:drawable="@drawable/launcher_animate_wave1" />
             </layer-list>
         </aapt:attr>

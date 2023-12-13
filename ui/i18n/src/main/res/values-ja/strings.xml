@@ -220,7 +220,7 @@
   <string name="playback_error_timeout">操作がタイムアウトしました</string>
   <string name="playback_error_source">メディアファイルにアクセスできません</string>
   <string name="no_media_playing_label">再生するメディアがありません</string>
-  <string name="unknown_media_key">AntennaPod - 不明なメディアキー: %1$d</string>
+  <string name="unknown_media_key">Hidden Pod - 不明なメディアキー: %1$d</string>
   <string name="error_file_not_found">ファイルが見つかりません</string>
   <string name="no_media_label">アイテムにメディアファイルが含まれていません</string>
   <!--Queue operations-->
@@ -359,7 +359,7 @@
   <string name="pref_show_subscription_title_summary">カバーの画像の下に購読タイトルを表示します。</string>
   <!--About screen-->
   <string name="about_pref">AntennaPodについて</string>
-  <string name="antennapod_version">AntennaPod バージョン</string>
+  <string name="antennapod_version">Hidden Pod バージョン</string>
   <string name="contributors">貢献者</string>
   <string name="contributors_summary">AntennaPodをより良いものにするために、誰もが、コードや翻訳、フォーラムでのユーザー支援などの協力を行えます。</string>
   <string name="developers">開発者</string>
@@ -443,7 +443,7 @@
   <string name="synchronization_host_explanation">同期するサーバーを自分で選ぶことができます。同期したいサーバーが決まりましたら、そのアドレスをここに入力してください。</string>
   <string name="synchronization_host_label">サーバーアドレス</string>
   <string name="proceed_to_login_butLabel">ログインに進む</string>
-  <string name="synchronization_nextcloud_authenticate_browser">開いた Web ブラウザーを使用してアクセスを許可し、AntennaPod に戻ります。</string>
+  <string name="synchronization_nextcloud_authenticate_browser">開いた Web ブラウザーを使用してアクセスを許可し、Hidden Pod に戻ります。</string>
   <string name="gpodnetauth_login_butLabel">ログイン</string>
   <string name="synchronization_credentials_explanation">同期サーバー用のアカウント情報を提供してください。</string>
   <string name="gpodnetauth_encryption_warning">パスワードやデータは暗号化されません！</string>
@@ -452,7 +452,7 @@
   <string name="synchronization_login_butLabel">ログイン</string>
   <string name="synchronization_selectDevice_explanation">同期サーバーで作成したデバイスを選択するか、新しいデバイスを作成してください。</string>
   <string name="gpodnetauth_device_name">デバイス名</string>
-  <string name="gpodnetauth_device_name_default">%1$s の AntennaPod</string>
+  <string name="gpodnetauth_device_name_default">%1$s の Hidden Pod</string>
   <string name="gpodnetauth_existing_devices">既存のデバイス</string>
   <string name="gpodnetauth_create_device">デバイスの作成</string>
   <string name="gpodnetauth_finish_descr">おめでとうございます！gpodder.netアカウントが今お使いのデバイスとリンクされました。 AntennaPodは今から自動的にgpodder.netアカウントを使用してデバイスの購読を同期します。</string>
@@ -508,7 +508,7 @@
   <string name="include_terms">以下の用語のいずれかを含むエピソードのみを含める</string>
   <string name="exclude_episodes_shorter_than">指定時間より短いエピソードを除外する</string>
   <string name="keep_updated_summary">すべてのポッドキャストを (自動) 更新する時にこのポッドキャストを含めます</string>
-  <string name="auto_download_disabled_globally">メインの AntennaPod 設定で自動ダウンロードが無効になっています</string>
+  <string name="auto_download_disabled_globally">メインの Hidden Pod 設定で自動ダウンロードが無効になっています</string>
   <string name="statistics_time_played">再生時間:</string>
   <string name="statistics_total_duration">合計再生時間 (推定):</string>
   <string name="statistics_episodes_on_device">デバイス上のエピソード:</string>

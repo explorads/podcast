@@ -27,17 +27,17 @@
             android:summary="@string/downloads_pref_sum"
             android:icon="@drawable/ic_download" />
 
-    <Preference
-            android:key="prefScreenSynchronization"
-            android:title="@string/synchronization_pref"
-            android:summary="@string/synchronization_sum"
-            android:icon="@drawable/ic_cloud" />
+<!--    <Preference-->
+<!--            android:key="prefScreenSynchronization"-->
+<!--            android:title="@string/synchronization_pref"-->
+<!--            android:summary="@string/synchronization_sum"-->
+<!--            android:icon="@drawable/ic_cloud" />-->
 
-    <Preference
-            android:key="prefScreenImportExport"
-            android:title="@string/import_export_pref"
-            android:summary="@string/import_export_summary"
-            android:icon="@drawable/ic_storage" />
+<!--    <Preference-->
+<!--            android:key="prefScreenImportExport"-->
+<!--            android:title="@string/import_export_pref"-->
+<!--            android:summary="@string/import_export_summary"-->
+<!--            android:icon="@drawable/ic_storage" />-->
 
     <Preference
             android:key="notifications"
@@ -47,22 +47,22 @@
     <PreferenceCategory
             android:key="project"
             android:title="@string/project_pref">
-        <Preference
-            android:key="prefDocumentation"
-            android:title="@string/documentation_support"
-            android:icon="@drawable/ic_questionmark" />
-        <Preference
-            android:key="prefViewForum"
-            android:title="@string/visit_user_forum"
-            android:icon="@drawable/ic_chat" />
-        <Preference
-            android:key="prefContribute"
-            android:title="@string/pref_contribute"
-            android:icon="@drawable/ic_contribute" />
-        <Preference
-            android:key="prefSendBugReport"
-            android:title="@string/bug_report_title"
-            android:icon="@drawable/ic_bug" />
+<!--        <Preference-->
+<!--            android:key="prefDocumentation"-->
+<!--            android:title="@string/documentation_support"-->
+<!--            android:icon="@drawable/ic_questionmark" />-->
+<!--        <Preference-->
+<!--            android:key="prefViewForum"-->
+<!--            android:title="@string/visit_user_forum"-->
+<!--            android:icon="@drawable/ic_chat" />-->
+<!--        <Preference-->
+<!--            android:key="prefContribute"-->
+<!--            android:title="@string/pref_contribute"-->
+<!--            android:icon="@drawable/ic_contribute" />-->
+<!--        <Preference-->
+<!--            android:key="prefSendBugReport"-->
+<!--            android:title="@string/bug_report_title"-->
+<!--            android:icon="@drawable/ic_bug" />-->
         <Preference
             android:key="prefAbout"
             android:title="@string/about_pref"
