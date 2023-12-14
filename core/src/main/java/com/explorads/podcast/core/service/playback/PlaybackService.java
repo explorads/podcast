@@ -64,8 +64,6 @@ import com.explorads.podcast.core.widget.WidgetUpdater;
 import com.explorads.podcast.model.playback.MediaType;
 import com.explorads.podcast.model.playback.Playable;
 import com.explorads.podcast.playback.base.PlaybackServiceMediaPlayer;
-//import com.explorads.podcast.playback.cast.CastPsmp;
-//import com.explorads.podcast.playback.cast.CastStateListener;
 
 import org.greenrobot.eventbus.EventBus;
 import org.greenrobot.eventbus.Subscribe;
@@ -214,11 +212,15 @@ public class PlaybackService extends MediaBrowserServiceCompat {
         }
     }
 
+    @SuppressLint("UnspecifiedRegisterReceiverFlag")
     @Override
     public void onCreate() {
         super.onCreate();
         Log.d(TAG, "Service created.");
         isRunning = true;
+
+        shouldPlayAudioAd = false;
+        didPlayAudioAd = false;
 
         stateManager = new PlaybackServiceStateManager(this);
         notificationBuilder = new PlaybackServiceNotificationBuilder(this);
@@ -784,6 +786,8 @@ public class PlaybackService extends MediaBrowserServiceCompat {
         }
     };
 
+    private boolean shouldPlayAudioAd = false;
+    private boolean didPlayAudioAd = false;
     private final PlaybackServiceMediaPlayer.PSMPCallback mediaPlayerCallback = new PlaybackServiceMediaPlayer.PSMPCallback() {
         @Override
         public void statusChanged(PlaybackServiceMediaPlayer.PSMPInfo newInfo) {
@@ -794,8 +798,11 @@ public class PlaybackService extends MediaBrowserServiceCompat {
             }
 
             updateMediaSession(newInfo.playerStatus);
+            Log.d(TAG, "statusChanged-> playerStatus: "+newInfo.playerStatus);
             switch (newInfo.playerStatus) {
                 case INITIALIZED:
+                    shouldPlayAudioAd = true;
+                    didPlayAudioAd = false;
                     if (mediaPlayer.getPSMPInfo().playable != null) {
                         PlaybackPreferences.writeMediaPlaying(mediaPlayer.getPSMPInfo().playable,
                                 mediaPlayer.getPSMPInfo().playerStatus);
@@ -822,6 +829,22 @@ public class PlaybackService extends MediaBrowserServiceCompat {
                     //stopService();
                     break;
                 case PLAYING:
+
+                    Log.d(TAG, "PLAYING state-> shouldPlayAudioAd: "+shouldPlayAudioAd +", didPlayAudioAd: "+didPlayAudioAd);
+                    if (shouldPlayAudioAd){
+                        if (!didPlayAudioAd){
+                            Log.d(TAG, "PLAYING state-> PLAYING AD!!!!!!!!");
+                            didPlayAudioAd = true;
+                        }else{
+                            Log.d(TAG, "PLAYING state-> already played ad, bug prevented");
+                        }
+                        shouldPlayAudioAd = false;
+                    }else{
+                        Log.d(TAG, "PLAYING state-> no need to play the ad");
+                    }
+//                    mediaPlayer.playMediaObject();
+//                    mediaPlayer.playMediaObject(playable, true, true, true);
+
                     PlaybackPreferences.writePlayerStatus(mediaPlayer.getPlayerStatus());
                     saveCurrentPosition(true, null, Playable.INVALID_TIME);
                     recreateMediaSessionIfNeeded();

@@ -1,5 +1,6 @@
 package com.explorads.podcast.core.util.playback;
 
+import android.annotation.SuppressLint;
 import android.app.Activity;
 import android.content.BroadcastReceiver;
 import android.content.ComponentName;
@@ -78,6 +79,7 @@ public abstract class PlaybackController {
         }
     }
 
+    @SuppressLint("UnspecifiedRegisterReceiverFlag")
     private synchronized void initServiceRunning() {
         if (initialized) {
             return;
