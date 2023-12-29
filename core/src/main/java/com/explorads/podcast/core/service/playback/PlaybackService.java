@@ -56,6 +56,7 @@ import com.explorads.podcast.core.sync.queue.SynchronizationQueueSink;
 import com.explorads.podcast.core.util.FeedItemUtil;
 import com.explorads.podcast.core.util.FeedUtil;
 import com.explorads.podcast.core.util.IntentUtils;
+import com.explorads.podcast.core.util.MyLogger;
 import com.explorads.podcast.core.util.NetworkUtils;
 import com.explorads.podcast.core.util.gui.NotificationUtils;
 import com.explorads.podcast.core.util.playback.PlayableUtils;
@@ -636,6 +637,7 @@ public class PlaybackService extends MediaBrowserServiceCompat {
                 if (status == PlayerStatus.PLAYING) {
                     mediaPlayer.pause(!UserPreferences.isPersistNotify(), false);
                 } else if (status == PlayerStatus.PAUSED || status == PlayerStatus.PREPARED) {
+                    MyLogger.log("PlaybackService-> handleKeycode-> KEYCODE_MEDIA_PLAY_PAUSE-> status == PlayerStatus.PAUSED || status == PlayerStatus.PREPARED");
                     mediaPlayer.resume();
                 } else if (status == PlayerStatus.PREPARING) {
                     mediaPlayer.setStartWhenPrepared(!mediaPlayer.isStartWhenPrepared());
@@ -651,6 +653,7 @@ public class PlaybackService extends MediaBrowserServiceCompat {
                 return true;
             case KeyEvent.KEYCODE_MEDIA_PLAY:
                 if (status == PlayerStatus.PAUSED || status == PlayerStatus.PREPARED) {
+                    MyLogger.log("PlaybackService-> handleKeycode-> KEYCODE_MEDIA_PLAY-> status == PlayerStatus.PAUSED || status == PlayerStatus.PREPARED");
                     mediaPlayer.resume();
                 } else if (status == PlayerStatus.INITIALIZED) {
                     mediaPlayer.setStartWhenPrepared(true);
@@ -829,18 +832,20 @@ public class PlaybackService extends MediaBrowserServiceCompat {
                     //stopService();
                     break;
                 case PLAYING:
-
-                    Log.d(TAG, "PLAYING state-> shouldPlayAudioAd: "+shouldPlayAudioAd +", didPlayAudioAd: "+didPlayAudioAd);
+                    MyLogger.log("PlaybackService-> PLAYING state-> shouldPlayAudioAd: "+shouldPlayAudioAd +", didPlayAudioAd: "+didPlayAudioAd);
                     if (shouldPlayAudioAd){
                         if (!didPlayAudioAd){
-                            Log.d(TAG, "PLAYING state-> PLAYING AD!!!!!!!!");
+                            MyLogger.log("PlaybackService-> PLAYING state-> PLAYING AD!!!!!!!!");
+                            if (mediaPlayer instanceof LocalPSMP){
+                                ((LocalPSMP) mediaPlayer).playAd();
+                            }
                             didPlayAudioAd = true;
                         }else{
-                            Log.d(TAG, "PLAYING state-> already played ad, bug prevented");
+                            MyLogger.log("PlaybackService-> PLAYING state-> already played ad, bug prevented");
                         }
                         shouldPlayAudioAd = false;
                     }else{
-                        Log.d(TAG, "PLAYING state-> no need to play the ad");
+                        MyLogger.log("PlaybackService-> PLAYING state-> no need to play the ad");
                     }
 //                    mediaPlayer.playMediaObject();
 //                    mediaPlayer.playMediaObject(playable, true, true, true);
@@ -1443,6 +1448,7 @@ public class PlaybackService extends MediaBrowserServiceCompat {
     private final BroadcastReceiver autoStateUpdated = new BroadcastReceiver() {
         @Override
         public void onReceive(Context context, Intent intent) {
+            MyLogger.log("PlaybackService-> autoStateUpdated");
             String status = intent.getStringExtra("media_connection_status");
             boolean isConnectedToCar = "media_connected".equals(status);
             Log.d(TAG, "Received Auto Connection update: " + status);
@@ -1451,6 +1457,7 @@ public class PlaybackService extends MediaBrowserServiceCompat {
             } else {
                 PlayerStatus playerStatus = mediaPlayer.getPlayerStatus();
                 if (playerStatus == PlayerStatus.PAUSED || playerStatus == PlayerStatus.PREPARED) {
+                    MyLogger.log("PlaybackService-> autoStateUpdated-> playerStatus == PlayerStatus.PAUSED || playerStatus == PlayerStatus.PREPARED");
                     mediaPlayer.resume();
                 } else if (playerStatus == PlayerStatus.PREPARING) {
                     mediaPlayer.setStartWhenPrepared(!mediaPlayer.isStartWhenPrepared());
@@ -1545,6 +1552,7 @@ public class PlaybackService extends MediaBrowserServiceCompat {
                 return;
             }
             if (!bluetooth && UserPreferences.isUnpauseOnHeadsetReconnect()) {
+                MyLogger.log("PlaybackService-> unpauseIfPauseOnDisconnect-> isUnpauseOnHeadsetReconnect");
                 mediaPlayer.resume();
             } else if (bluetooth && UserPreferences.isUnpauseOnBluetoothReconnect()) {
                 // let the user know we've started playback again...
@@ -1552,6 +1560,7 @@ public class PlaybackService extends MediaBrowserServiceCompat {
                 if (v != null) {
                     v.vibrate(500);
                 }
+                MyLogger.log("PlaybackService-> unpauseIfPauseOnDisconnect-> isUnpauseOnBluetoothReconnect");
                 mediaPlayer.resume();
             }
         }
@@ -1615,6 +1624,7 @@ public class PlaybackService extends MediaBrowserServiceCompat {
     }
 
     public void resume() {
+        MyLogger.log("PlaybackService-> resume");
         mediaPlayer.resume();
         taskManager.restartSleepTimer();
     }
@@ -1772,6 +1782,7 @@ public class PlaybackService extends MediaBrowserServiceCompat {
             Log.d(TAG, "onPlay()");
             PlayerStatus status = getStatus();
             if (status == PlayerStatus.PAUSED || status == PlayerStatus.PREPARED) {
+                Log.d(TAG, "PlaybackService-> onPlay");
                 resume();
             } else if (status == PlayerStatus.INITIALIZED) {
                 setStartWhenPrepared(true);

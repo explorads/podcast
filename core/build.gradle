@@ -70,6 +70,8 @@ dependencies {
     implementation "com.google.android.exoplayer:exoplayer-core:$exoPlayerVersion"
     implementation "com.google.android.exoplayer:exoplayer-ui:$exoPlayerVersion"
     implementation "com.google.android.exoplayer:extension-okhttp:$exoPlayerVersion"
+//    implementation "com.google.android.exoplayer:extension-ima:$exoPlayerVersion"
+//    implementation 'com.google.android.exoplayer:extension-ima:2.19.0'
 
     // Non-free dependencies:
     playApi "com.google.android.support:wearable:$wearableSupportVersion"

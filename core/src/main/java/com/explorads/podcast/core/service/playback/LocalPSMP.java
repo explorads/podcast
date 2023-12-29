@@ -14,6 +14,7 @@ import androidx.media.AudioAttributesCompat;
 import androidx.media.AudioFocusRequestCompat;
 import androidx.media.AudioManagerCompat;
 import com.explorads.podcast.core.feed.util.PlaybackSpeedUtils;
+import com.explorads.podcast.core.util.MyLogger;
 import com.explorads.podcast.event.PlayerErrorEvent;
 import com.explorads.podcast.event.playback.BufferUpdateEvent;
 import com.explorads.podcast.event.playback.SpeedChangedEvent;
@@ -26,6 +27,7 @@ import com.explorads.podcast.playback.base.PlaybackServiceMediaPlayer;
 import com.explorads.podcast.playback.base.PlayerStatus;
 import com.explorads.podcast.playback.base.RewindAfterPauseUtils;
 import com.explorads.podcast.storage.preferences.UserPreferences;
+
 import org.greenrobot.eventbus.EventBus;
 
 import java.io.File;
@@ -185,6 +187,7 @@ public class LocalPSMP extends PlaybackServiceMediaPlayer {
 
             if (prepareImmediately) {
                 setPlayerStatus(PlayerStatus.PREPARING, media);
+                MyLogger.log("LocalPSMP-> playMediaObject-> prepareImmediately");
                 mediaPlayer.prepare();
                 onPrepared(startWhenPrepared);
             }
@@ -204,6 +207,7 @@ public class LocalPSMP extends PlaybackServiceMediaPlayer {
      */
     @Override
     public void resume() {
+        MyLogger.log("LocalPSMP-> resume");
         if (playerStatus == PlayerStatus.PAUSED || playerStatus == PlayerStatus.PREPARED) {
             int focusGained = AudioManagerCompat.requestAudioFocus(audioManager, audioFocusRequest);
 
@@ -246,6 +250,7 @@ public class LocalPSMP extends PlaybackServiceMediaPlayer {
      */
     @Override
     public void pause(final boolean abandonFocus, final boolean reinit) {
+        MyLogger.log("LocalPSMP-> pause");
         releaseWifiLockIfNecessary();
         if (playerStatus == PlayerStatus.PLAYING) {
             Log.d(TAG, "Pausing playback.");
@@ -276,6 +281,7 @@ public class LocalPSMP extends PlaybackServiceMediaPlayer {
      */
     @Override
     public void prepare() {
+        MyLogger.log("LocalPSMP-> prepare");
         if (playerStatus == PlayerStatus.INITIALIZED) {
             Log.d(TAG, "Preparing media player");
             setPlayerStatus(PlayerStatus.PREPARING, media);
@@ -292,6 +298,7 @@ public class LocalPSMP extends PlaybackServiceMediaPlayer {
             throw new IllegalStateException("Player is not in PREPARING state");
         }
         Log.d(TAG, "Resource prepared");
+        MyLogger.log("LocalPSMP-> onPrepared");
 
         if (mediaType == MediaType.VIDEO) {
             videoSize = new Pair<>(mediaPlayer.getVideoWidth(), mediaPlayer.getVideoHeight());
@@ -309,6 +316,7 @@ public class LocalPSMP extends PlaybackServiceMediaPlayer {
         setPlayerStatus(PlayerStatus.PREPARED, media);
 
         if (startWhenPrepared) {
+            MyLogger.log("LocalPSMP-> onPrepared-> startWhenPrepared TRUE");
             resume();
         }
     }
@@ -320,6 +328,7 @@ public class LocalPSMP extends PlaybackServiceMediaPlayer {
      */
     @Override
     public void reinit() {
+        MyLogger.log("LocalPSMP-> reinit");
         Log.d(TAG, "reinit()");
         releaseWifiLockIfNecessary();
         if (media != null) {
@@ -755,4 +764,11 @@ public class LocalPSMP extends PlaybackServiceMediaPlayer {
     public boolean isCasting() {
         return false;
     }
+
+
+    public void playAd() {
+//        ExplorLogger.INSTANCE.log("LocalPSMP-> playAd");
+
+    }
+
 }

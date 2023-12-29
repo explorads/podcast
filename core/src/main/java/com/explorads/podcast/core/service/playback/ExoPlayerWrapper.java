@@ -10,6 +10,7 @@ import androidx.annotation.NonNull;
 import androidx.core.util.Consumer;
 
 import com.explorads.podcast.core.R;
+import com.explorads.podcast.core.util.MyLogger;
 import com.google.android.exoplayer2.C;
 import com.google.android.exoplayer2.DefaultLoadControl;
 import com.google.android.exoplayer2.DefaultRenderersFactory;
@@ -167,10 +168,12 @@ public class ExoPlayerWrapper {
     }
 
     public void pause() {
+        MyLogger.log("ExoPlayerWrapper-> pause");
         exoPlayer.pause();
     }
 
     public void prepare() throws IllegalStateException {
+        MyLogger.log("ExoPlayerWrapper-> prepare");
         exoPlayer.setMediaSource(mediaSource, false);
         exoPlayer.prepare();
     }
@@ -257,12 +260,14 @@ public class ExoPlayerWrapper {
     }
 
     public void start() {
+        MyLogger.log("ExoPlayerWrapper-> start");
         exoPlayer.play();
         // Can't set params when paused - so always set it on start in case they changed
         exoPlayer.setPlaybackParameters(playbackParameters);
     }
 
     public void stop() {
+        MyLogger.log("ExoPlayerWrapper-> stop");
         exoPlayer.stop();
     }
 
