@@ -7,6 +7,7 @@ import androidx.core.content.ContextCompat;
 
 import com.explorads.podcast.core.service.playback.PlaybackServiceInterface;
 import com.explorads.podcast.core.service.playback.PlaybackService;
+import com.explorads.podcast.core.util.MyLogger;
 import com.explorads.podcast.model.playback.Playable;
 
 public class PlaybackServiceStarter {
@@ -41,6 +42,7 @@ public class PlaybackServiceStarter {
     }
 
     public void start() {
+        MyLogger.log("PlaybackServiceStarter-> start -> PlaybackService.isRunning: "+PlaybackService.isRunning +" ,callEvenIfRunning: "+callEvenIfRunning);
         if (PlaybackService.isRunning && !callEvenIfRunning) {
             return;
         }

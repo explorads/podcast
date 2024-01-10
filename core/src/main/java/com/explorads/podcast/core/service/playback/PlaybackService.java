@@ -218,6 +218,7 @@ public class PlaybackService extends MediaBrowserServiceCompat {
     public void onCreate() {
         super.onCreate();
         Log.d(TAG, "Service created.");
+        MyLogger.log("PlaybackService-> Service created");
         isRunning = true;
 
         shouldPlayAudioAd = false;
