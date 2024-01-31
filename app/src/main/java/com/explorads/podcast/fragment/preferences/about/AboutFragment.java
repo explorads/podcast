@@ -24,7 +24,7 @@ public class AboutFragment extends PreferenceFragmentCompat {
                 "%s", BuildConfig.VERSION_NAME));
         findPreference("about_privacy_policy").setOnPreferenceClickListener((preference) -> {
 //            IntentUtils.openInBrowser(getContext(), "https://antennapod.org/privacy/");
-            IntentUtils.openInBrowser(getContext(), "https://hiddenpod.org/privacy/");
+            IntentUtils.openInBrowser(getContext(), "https://hiddencast.com/privacy_policy.html");
             return true;
         });
         findPreference("about_licenses").setOnPreferenceClickListener((preference) -> {

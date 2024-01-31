@@ -83,7 +83,7 @@ public class HomeFragment extends Fragment implements Toolbar.OnMenuItemClickLis
     private AdManagerAdView adView;
     private FrameLayout adViewContainer;
 
-    private static final String BANNER_AD_UNIT_ID = "ca-app-pub-3940256099942544/6300978111";
+    private static final String BANNER_AD_UNIT_ID = "ca-app-pub-2062895002529894/1885858313";
 
 
 

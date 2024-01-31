@@ -111,7 +111,7 @@ public class MainActivity extends CastEnabledActivity {
     private AdManagerInterstitialAd mAdManagerInterstitialAd;
 
 
-    private static final String INTERSTITIAL_AD_UNIT_ID = "/6499/example/interstitial";
+    private static final String INTERSTITIAL_AD_UNIT_ID = "ca-app-pub-2062895002529894/1200258761";
 
     @NonNull
     public static Intent getIntentToOpenFeed(@NonNull Context context, long feedId) {
