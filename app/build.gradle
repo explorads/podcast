@@ -6,18 +6,15 @@ apply from: "../common.gradle"
 apply from: "../playFlavor.gradle"
 
 android {
-//    namespace "de.danoeh.antennapod"
     namespace "com.explorads.podcast"
 
     defaultConfig {
-        // Version code schema:
-        // "1.2.3-beta4"    -> 1020304
-        // "1.2.3"          -> 1020395
-        versionCode 2
-        versionName "1.0"
+        applicationId "com.explorads.podcast"
+        versionCode 3
+        versionName "1.1"
 
         // changing the name of the app bundle
-        setProperty("archivesBaseName", "HiddenCast" + "-v" + versionCode + "(" + versionName + ")")
+        setProperty("archivesBaseName", applicationId + "-v" + versionCode + "(" + versionName + ")")
 
         javaCompileOptions {
             annotationProcessorOptions {
