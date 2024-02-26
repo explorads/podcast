@@ -15,6 +15,8 @@ import android.view.MenuItem;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.EditText;
+import android.widget.Toast;
+
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.appcompat.app.ActionBarDrawerToggle;
@@ -34,6 +36,7 @@ import com.bumptech.glide.Glide;
 import com.explorads.podcast.R;
 import com.explorads.podcast.core.sync.queue.SynchronizationQueueSink;
 import com.explorads.podcast.core.util.download.FeedUpdateManager;
+import com.explorads.podcast.event.DrawerStateEvent;
 import com.explorads.podcast.fragment.AudioPlayerFragment;
 import com.explorads.podcast.helpers.GoogleAdsHelper;
 import com.explorads.podcast.model.download.DownloadStatus;
@@ -292,7 +295,19 @@ public class MainActivity extends CastEnabledActivity {
                 drawerLayout.removeDrawerListener(drawerToggle);
             }
             drawerToggle = new ActionBarDrawerToggle(this, drawerLayout, toolbar,
-                    R.string.drawer_open, R.string.drawer_close);
+                    R.string.drawer_open, R.string.drawer_close){
+                @Override
+                public void onDrawerOpened(View drawerView) {
+                    super.onDrawerOpened(drawerView);
+                    EventBus.getDefault().post(new DrawerStateEvent(true));
+                }
+
+                @Override
+                public void onDrawerClosed(View drawerView) {
+                    super.onDrawerClosed(drawerView);
+                    EventBus.getDefault().post(new DrawerStateEvent(false));
+                }
+            };
             drawerLayout.addDrawerListener(drawerToggle);
             drawerToggle.syncState();
             drawerToggle.setDrawerIndicatorEnabled(!displayUpArrow);

@@ -29,6 +29,7 @@ import androidx.fragment.app.FragmentContainerView;
 import com.explorads.podcast.R;
 import com.explorads.podcast.core.storage.DBReader;
 import com.explorads.podcast.databinding.HomeFragmentBinding;
+import com.explorads.podcast.event.DrawerStateEvent;
 import com.explorads.podcast.ui.home.sections.AllowNotificationsSection;
 import com.explorads.podcast.ui.home.sections.DownloadsSection;
 import com.explorads.podcast.ui.home.sections.EpisodesSurpriseSection;
@@ -336,6 +337,17 @@ public class HomeFragment extends Fragment implements Toolbar.OnMenuItemClickLis
     @Subscribe(threadMode = ThreadMode.MAIN)
     public void onFeedListChanged(FeedListUpdateEvent event) {
         updateWelcomeScreenVisibility();
+    }
+
+
+    @Subscribe(threadMode = ThreadMode.MAIN)
+    public void onDrawerStateChanged(DrawerStateEvent event) {
+        if (event.isDrawerOpen){
+            adViewContainer.setVisibility(View.GONE);
+        }else{
+            adViewContainer.setVisibility(View.VISIBLE);
+        }
+
     }
 
     private void updateWelcomeScreenVisibility() {
