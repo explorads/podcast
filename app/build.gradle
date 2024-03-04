@@ -10,7 +10,7 @@ android {
 
     defaultConfig {
         applicationId "com.explorads.podcast"
-        versionCode 3
+        versionCode 4
         versionName "1.1"
 
         // changing the name of the app bundle
