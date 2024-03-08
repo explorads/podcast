@@ -15,7 +15,6 @@ import android.view.MenuItem;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.EditText;
-import android.widget.Toast;
 
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
@@ -32,34 +31,21 @@ import androidx.fragment.app.FragmentTransaction;
 import androidx.recyclerview.widget.RecyclerView;
 import androidx.work.WorkInfo;
 import androidx.work.WorkManager;
+
 import com.bumptech.glide.Glide;
 import com.explorads.podcast.R;
-import com.explorads.podcast.core.sync.queue.SynchronizationQueueSink;
-import com.explorads.podcast.core.util.download.FeedUpdateManager;
-import com.explorads.podcast.event.DrawerStateEvent;
-import com.explorads.podcast.fragment.AudioPlayerFragment;
-import com.explorads.podcast.helpers.GoogleAdsHelper;
-import com.explorads.podcast.model.download.DownloadStatus;
-import com.explorads.podcast.net.download.serviceinterface.DownloadServiceInterface;
-import com.explorads.podcast.ui.common.ThemeUtils;
-import com.explorads.podcast.ui.home.HomeFragment;
-import com.explorads.podcast.view.LockableBottomSheetBehavior;
-import com.google.android.gms.ads.AdError;
-import com.google.android.gms.ads.FullScreenContentCallback;
-import com.google.android.gms.ads.LoadAdError;
-import com.google.android.gms.ads.admanager.AdManagerAdRequest;
-import com.google.android.gms.ads.admanager.AdManagerInterstitialAd;
-import com.google.android.gms.ads.admanager.AdManagerInterstitialAdLoadCallback;
-import com.google.android.material.appbar.MaterialToolbar;
-import com.google.android.material.bottomsheet.BottomSheetBehavior;
-import com.google.android.material.snackbar.Snackbar;
 import com.explorads.podcast.core.preferences.ThemeSwitcher;
 import com.explorads.podcast.core.receiver.MediaButtonReceiver;
+import com.explorads.podcast.core.sync.queue.SynchronizationQueueSink;
+import com.explorads.podcast.core.util.download.FeedUpdateManager;
+import com.explorads.podcast.dialog.RatingDialog;
+import com.explorads.podcast.event.DrawerStateEvent;
 import com.explorads.podcast.event.EpisodeDownloadEvent;
 import com.explorads.podcast.event.FeedUpdateRunningEvent;
 import com.explorads.podcast.event.MessageEvent;
 import com.explorads.podcast.fragment.AddFeedFragment;
 import com.explorads.podcast.fragment.AllEpisodesFragment;
+import com.explorads.podcast.fragment.AudioPlayerFragment;
 import com.explorads.podcast.fragment.CompletedDownloadsFragment;
 import com.explorads.podcast.fragment.DownloadLogFragment;
 import com.explorads.podcast.fragment.FeedItemlistFragment;
@@ -70,8 +56,23 @@ import com.explorads.podcast.fragment.QueueFragment;
 import com.explorads.podcast.fragment.SearchFragment;
 import com.explorads.podcast.fragment.SubscriptionFragment;
 import com.explorads.podcast.fragment.TransitionEffect;
+import com.explorads.podcast.helpers.GoogleAdsHelper;
+import com.explorads.podcast.model.download.DownloadStatus;
+import com.explorads.podcast.net.download.serviceinterface.DownloadServiceInterface;
+import com.explorads.podcast.playback.cast.CastEnabledActivity;
 import com.explorads.podcast.storage.preferences.UserPreferences;
 import com.explorads.podcast.ui.appstartintent.MainActivityStarter;
+import com.explorads.podcast.ui.common.ThemeUtils;
+import com.explorads.podcast.ui.home.HomeFragment;
+import com.explorads.podcast.view.LockableBottomSheetBehavior;
+import com.google.android.gms.ads.AdError;
+import com.google.android.gms.ads.FullScreenContentCallback;
+import com.google.android.gms.ads.LoadAdError;
+import com.google.android.gms.ads.admanager.AdManagerAdRequest;
+import com.google.android.gms.ads.appopen.AppOpenAd;
+import com.google.android.material.appbar.MaterialToolbar;
+import com.google.android.material.bottomsheet.BottomSheetBehavior;
+import com.google.android.material.snackbar.Snackbar;
 
 import org.apache.commons.lang3.ArrayUtils;
 import org.apache.commons.lang3.Validate;
@@ -81,9 +82,6 @@ import org.greenrobot.eventbus.ThreadMode;
 
 import java.util.HashMap;
 import java.util.Map;
-
-import com.explorads.podcast.dialog.RatingDialog;
-import com.explorads.podcast.playback.cast.CastEnabledActivity;
 
 /**
  * The activity that is shown when the user launches the app.
@@ -111,10 +109,14 @@ public class MainActivity extends CastEnabledActivity {
     private Insets navigationBarInsets = Insets.NONE;
 
 
-    private AdManagerInterstitialAd mAdManagerInterstitialAd;
+//    private AdManagerInterstitialAd mAdManagerInterstitialAd;
+
+    private AppOpenAd mAppOpenAd;
 
 
-    private static final String INTERSTITIAL_AD_UNIT_ID = "ca-app-pub-2062895002529894/1200258761";
+//    private static final String INTERSTITIAL_AD_UNIT_ID = "ca-app-pub-2062895002529894/1200258761";
+
+    private static final String APP_OPEN_AD_UNIT_ID = "ca-app-pub-2062895002529894/1802893999";
 
     @NonNull
     public static Intent getIntentToOpenFeed(@NonNull Context context, long feedId) {
@@ -135,7 +137,8 @@ public class MainActivity extends CastEnabledActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.main);
 
-        loadInterstitialAd();
+//        loadInterstitialAd();
+        loadAppOpenAd();
 
         recycledViewPool.setMaxRecycledViews(R.id.view_type_episode_item, 25);
 
@@ -264,30 +267,30 @@ public class MainActivity extends CastEnabledActivity {
 
     private final BottomSheetBehavior.BottomSheetCallback bottomSheetCallback =
             new BottomSheetBehavior.BottomSheetCallback() {
-        @Override
-        public void onStateChanged(@NonNull View view, int state) {
-            if (state == BottomSheetBehavior.STATE_COLLAPSED) {
-                onSlide(view, 0.0f);
-            } else if (state == BottomSheetBehavior.STATE_EXPANDED) {
-                onSlide(view, 1.0f);
-            }
-        }
+                @Override
+                public void onStateChanged(@NonNull View view, int state) {
+                    if (state == BottomSheetBehavior.STATE_COLLAPSED) {
+                        onSlide(view, 0.0f);
+                    } else if (state == BottomSheetBehavior.STATE_EXPANDED) {
+                        onSlide(view, 1.0f);
+                    }
+                }
 
-        @Override
-        public void onSlide(@NonNull View view, float slideOffset) {
-            AudioPlayerFragment audioPlayer = (AudioPlayerFragment) getSupportFragmentManager()
-                    .findFragmentByTag(AudioPlayerFragment.TAG);
-            if (audioPlayer == null) {
-                return;
-            }
+                @Override
+                public void onSlide(@NonNull View view, float slideOffset) {
+                    AudioPlayerFragment audioPlayer = (AudioPlayerFragment) getSupportFragmentManager()
+                            .findFragmentByTag(AudioPlayerFragment.TAG);
+                    if (audioPlayer == null) {
+                        return;
+                    }
 
-            if (slideOffset == 0.0f) { //STATE_COLLAPSED
-                audioPlayer.scrollToPage(AudioPlayerFragment.POS_COVER);
-            }
+                    if (slideOffset == 0.0f) { //STATE_COLLAPSED
+                        audioPlayer.scrollToPage(AudioPlayerFragment.POS_COVER);
+                    }
 
-            audioPlayer.fadePlayerToToolbar(slideOffset);
-        }
-    };
+                    audioPlayer.fadePlayerToToolbar(slideOffset);
+                }
+            };
 
     public void setupToolbarToggle(@NonNull MaterialToolbar toolbar, boolean displayUpArrow) {
         if (drawerLayout != null) { // Tablet layout does not have a drawer
@@ -295,7 +298,7 @@ public class MainActivity extends CastEnabledActivity {
                 drawerLayout.removeDrawerListener(drawerToggle);
             }
             drawerToggle = new ActionBarDrawerToggle(this, drawerLayout, toolbar,
-                    R.string.drawer_open, R.string.drawer_close){
+                    R.string.drawer_open, R.string.drawer_close) {
                 @Override
                 public void onDrawerOpened(View drawerView) {
                     super.onDrawerOpened(drawerView);
@@ -735,7 +738,7 @@ public class MainActivity extends CastEnabledActivity {
                 break;
         }
     }
-  
+
     //Hardware keyboard support
     @Override
     public boolean onKeyUp(int keyCode, KeyEvent event) {
@@ -789,92 +792,167 @@ public class MainActivity extends CastEnabledActivity {
     }
 
 
-
-
-
-    private void loadInterstitialAd() {
-
-
-        if (GoogleAdsHelper.didShowInterstitialAd()){
+    private void loadAppOpenAd() {
+        if (GoogleAdsHelper.didShowAppOpenAd()) {
             return;
         }
 
         AdManagerAdRequest adRequest = new AdManagerAdRequest.Builder().build();
+        AppOpenAd.load(this, APP_OPEN_AD_UNIT_ID, adRequest, new AppOpenAd.AppOpenAdLoadCallback() {
 
-        AdManagerInterstitialAd.load(this, INTERSTITIAL_AD_UNIT_ID, adRequest,
-                new AdManagerInterstitialAdLoadCallback() {
                     @Override
-                    public void onAdLoaded(@NonNull AdManagerInterstitialAd interstitialAd) {
-                        // The mAdManagerInterstitialAd reference will be null until
-                        // an ad is loaded.
-                        mAdManagerInterstitialAd = interstitialAd;
-                        Log.i(TAG, "onAdLoaded");
-                        showInterstitialAd();
-
-
+                    public void onAdLoaded(@NonNull AppOpenAd appOpenAd) {
+                        mAppOpenAd = appOpenAd;
+                        showAppOpenAd();
                     }
 
                     @Override
                     public void onAdFailedToLoad(@NonNull LoadAdError loadAdError) {
-                        // Handle the error
-                        Log.d(TAG, loadAdError.toString());
-                        mAdManagerInterstitialAd = null;
+                        Log.d(TAG, "onAdFailedToLoad: "+loadAdError.toString());
+                        mAppOpenAd = null;
                     }
-                });
 
 
+                }
+        );
     }
 
-    private void showInterstitialAd() {
+    private void showAppOpenAd(){
 
-        if (GoogleAdsHelper.didShowInterstitialAd()){
+        if (GoogleAdsHelper.didShowAppOpenAd()) {
             return;
         }
 
-
-        if (mAdManagerInterstitialAd != null) {
-            mAdManagerInterstitialAd.show(this);
-            mAdManagerInterstitialAd.setFullScreenContentCallback(new FullScreenContentCallback(){
-                @Override
-                public void onAdClicked() {
-                    // Called when a click is recorded for an ad.
-                    Log.d(TAG, "Ad was clicked.");
-                }
-
-                @Override
-                public void onAdDismissedFullScreenContent() {
-                    // Called when ad is dismissed.
-                    // Set the ad reference to null so you don't show the ad a second time.
-                    Log.d(TAG, "Ad dismissed fullscreen content.");
-                    mAdManagerInterstitialAd = null;
-                }
-
-                @Override
-                public void onAdFailedToShowFullScreenContent(AdError adError) {
-                    // Called when ad fails to show.
-                    Log.e(TAG, "Ad failed to show fullscreen content.");
-                    mAdManagerInterstitialAd = null;
-                }
-
-                @Override
-                public void onAdImpression() {
-                    // Called when an impression is recorded for an ad.
-                    Log.d(TAG, "Ad recorded an impression.");
-                }
-
-                @Override
-                public void onAdShowedFullScreenContent() {
-                    // Called when ad is shown.
-                    Log.d(TAG, "Ad showed fullscreen content.");
-
-                    // set as true, dont show the add again
-                    GoogleAdsHelper.setShowInterstitialAd();
-                }
-            });
-        } else {
-            Log.d("TAG", "The interstitial ad wasn't ready yet.");
+        if (mAppOpenAd==null){
+            return;
         }
 
+        mAppOpenAd.show(this);
+
+        mAppOpenAd.setFullScreenContentCallback(new FullScreenContentCallback() {
+            @Override
+            public void onAdClicked() {
+                // Called when a click is recorded for an ad.
+                Log.d(TAG, "Ad was clicked.");
+            }
+
+            @Override
+            public void onAdDismissedFullScreenContent() {
+                // Called when ad is dismissed.
+                // Set the ad reference to null so you don't show the ad a second time.
+                Log.d(TAG, "Ad dismissed fullscreen content.");
+                mAppOpenAd = null;
+            }
+
+            @Override
+            public void onAdFailedToShowFullScreenContent(AdError adError) {
+                // Called when ad fails to show.
+                Log.e(TAG, "Ad failed to show fullscreen content.");
+                mAppOpenAd = null;
+            }
+
+            @Override
+            public void onAdImpression() {
+                // Called when an impression is recorded for an ad.
+                Log.d(TAG, "Ad recorded an impression.");
+            }
+
+            @Override
+            public void onAdShowedFullScreenContent() {
+                // Called when ad is shown.
+                Log.d(TAG, "Ad showed fullscreen content.");
+
+                // set as true, dont show the add again
+                GoogleAdsHelper.setShowAppOpenAd();
+            }
+        });
+
+
     }
+
+//    private void loadInterstitialAd() {
+//
+//
+//        if (GoogleAdsHelper.didShowInterstitialAd()) {
+//            return;
+//        }
+//
+//        AdManagerAdRequest adRequest = new AdManagerAdRequest.Builder().build();
+//
+//        AdManagerInterstitialAd.load(this, INTERSTITIAL_AD_UNIT_ID, adRequest,
+//                new AdManagerInterstitialAdLoadCallback() {
+//                    @Override
+//                    public void onAdLoaded(@NonNull AdManagerInterstitialAd interstitialAd) {
+//                        // The mAdManagerInterstitialAd reference will be null until
+//                        // an ad is loaded.
+//                        mAdManagerInterstitialAd = interstitialAd;
+//                        Log.i(TAG, "onAdLoaded");
+//                        showInterstitialAd();
+//
+//
+//                    }
+//
+//                    @Override
+//                    public void onAdFailedToLoad(@NonNull LoadAdError loadAdError) {
+//                        // Handle the error
+//                        Log.d(TAG, loadAdError.toString());
+//                        mAdManagerInterstitialAd = null;
+//                    }
+//                });
+//
+//
+//    }
+//
+//    private void showInterstitialAd() {
+//
+//        if (GoogleAdsHelper.didShowInterstitialAd()) {
+//            return;
+//        }
+//
+//
+//        if (mAdManagerInterstitialAd != null) {
+//            mAdManagerInterstitialAd.show(this);
+//            mAdManagerInterstitialAd.setFullScreenContentCallback(new FullScreenContentCallback() {
+//                @Override
+//                public void onAdClicked() {
+//                    // Called when a click is recorded for an ad.
+//                    Log.d(TAG, "Ad was clicked.");
+//                }
+//
+//                @Override
+//                public void onAdDismissedFullScreenContent() {
+//                    // Called when ad is dismissed.
+//                    // Set the ad reference to null so you don't show the ad a second time.
+//                    Log.d(TAG, "Ad dismissed fullscreen content.");
+//                    mAdManagerInterstitialAd = null;
+//                }
+//
+//                @Override
+//                public void onAdFailedToShowFullScreenContent(AdError adError) {
+//                    // Called when ad fails to show.
+//                    Log.e(TAG, "Ad failed to show fullscreen content.");
+//                    mAdManagerInterstitialAd = null;
+//                }
+//
+//                @Override
+//                public void onAdImpression() {
+//                    // Called when an impression is recorded for an ad.
+//                    Log.d(TAG, "Ad recorded an impression.");
+//                }
+//
+//                @Override
+//                public void onAdShowedFullScreenContent() {
+//                    // Called when ad is shown.
+//                    Log.d(TAG, "Ad showed fullscreen content.");
+//
+//                    // set as true, dont show the add again
+//                    GoogleAdsHelper.setShowInterstitialAd();
+//                }
+//            });
+//        } else {
+//            Log.d("TAG", "The interstitial ad wasn't ready yet.");
+//        }
+//
+//    }
 
 }

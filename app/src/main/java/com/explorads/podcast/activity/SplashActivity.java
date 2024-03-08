@@ -55,17 +55,17 @@ public class SplashActivity extends Activity {
                             });
 
                         }, error -> {
-//                        error.printStackTrace();
-//                        CrashReportWriter.write(error);
-//                        Toast.makeText(this, error.getLocalizedMessage(), Toast.LENGTH_LONG).show();
-//                        finish();
+                        error.printStackTrace();
+                        CrashReportWriter.write(error);
+                        Toast.makeText(this, error.getLocalizedMessage(), Toast.LENGTH_LONG).show();
+                        finish();
 
-                            MobileAds.initialize(this, initializationStatus -> {
-                                error.printStackTrace();
-                                CrashReportWriter.write(error);
-                                Toast.makeText(this, error.getLocalizedMessage(), Toast.LENGTH_LONG).show();
-                                finish();
-                            });
+//                            MobileAds.initialize(this, initializationStatus -> {
+//                                error.printStackTrace();
+//                                CrashReportWriter.write(error);
+//                                Toast.makeText(this, error.getLocalizedMessage(), Toast.LENGTH_LONG).show();
+//                                finish();
+//                            });
 
                         });
     }
